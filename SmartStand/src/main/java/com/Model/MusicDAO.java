@@ -14,7 +14,7 @@ public class MusicDAO {
 	PreparedStatement psmt = null;
 	int cnt = 0;
 	ResultSet rs = null;
-	MusicDTO info = null; 
+	MusicDTO info = null; // **
 	ArrayList<MusicDTO> list = null;
 
 	public void conn() {
