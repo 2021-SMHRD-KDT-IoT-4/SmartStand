@@ -50,7 +50,7 @@ public class MusicDAO {
 		   list = new ArrayList<MusicDTO>();
 		      conn();
 		      try {
-		    	  String sql = "select * from web_member where mood = ? ";
+		    	  String sql = "select * from web_music where mood = ? ";
 		         psmt = conn.prepareStatement(sql);
 		         rs = psmt.executeQuery();
 		         
@@ -78,7 +78,7 @@ public class MusicDAO {
 		   list = new ArrayList<MusicDTO>();
 		      conn();
 		      try {
-		    	  String sql = "select * from web_member where genre = ? ";
+		    	  String sql = "select * from web_music where genre = ? ";
 		         psmt = conn.prepareStatement(sql);
 		         rs = psmt.executeQuery();
 		         
