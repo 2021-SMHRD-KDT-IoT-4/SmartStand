@@ -4,10 +4,10 @@ public class BoardDTO {
 
 	private int num;
 	private String sendName;
+	private String category;
 	private String myEmail;
 	private String message;
 	private String day;
-	private String category;
 
 	public BoardDTO(int num, String sendName, String category, String myEmail, String message, String day) {
 		this.num = num;
