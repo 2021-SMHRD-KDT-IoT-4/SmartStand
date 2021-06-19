@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 public class BoardDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
@@ -50,16 +51,17 @@ public class BoardDAO {
 		}
 	}
 
-	public int insertMessage(BoardDTO bdto, MemberDTO mdto) {
+	public int insertMessage(BoardDTO dto) {
 		conn();
-		String sql = "insert into web_board values(num_message.nextval, ?, ?, ?, sysdate)";
+		String sql = "insert into web_board values(num_message.nextval, ?, ?, ?, ?, sysdate)";
 
 		try {
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, mdto.getUser_Id());
-			psmt.setString(2, bdto.getCategory());
-			psmt.setString(3, bdto.getMessage());
+			psmt.setString(1, dto.getSendName());
+			psmt.setString(2, dto.getCategory());
+			psmt.setString(3, dto.getMyEmail());
+			psmt.setString(4, dto.getMessage());
 			
 			cnt = psmt.executeUpdate();
 
@@ -73,24 +75,25 @@ public class BoardDAO {
 		
 	}
 	
-	public ArrayList<BoardDTO> select(String id) {
+	public ArrayList<BoardDTO> select(String name) {
 		list = new ArrayList<BoardDTO>();
 		conn();
 		
 		try {
-			String sql = "select * from web_board where id =?";
+			String sql = "select * from web_board where receiveEmail =?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, id);
+			psmt.setString(1, name);
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
 				int num = rs.getInt(1);
 				String sendName = rs.getString(2);
-				String receiveEmail = rs.getString(3);
-				String message = rs.getString(4);
-				String day = rs.getString(5);
+				String category = rs.getString(3);
+				String receiveEmail = rs.getString(4);
+				String message = rs.getString(5);
+				String day = rs.getString(6);
 				
-				info = new BoardDTO();
+				info = new BoardDTO(num, sendName, category, receiveEmail, message, day);
 				list.add(info);
 			}
 		} catch (SQLException e) {
@@ -105,7 +108,7 @@ public class BoardDAO {
 		conn();
 		
 		try {
-			String sql = "delete from web_message where receiveEmail = ?";
+			String sql = "delete from web_board where receiveEmail = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			cnt = psmt.executeUpdate();
@@ -123,7 +126,7 @@ public class BoardDAO {
 		conn();
 		
 		try {
-			String sql = "delete from web_message where num = ?";
+			String sql = "delete from web_board where num = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, num);
 			cnt = psmt.executeUpdate();
