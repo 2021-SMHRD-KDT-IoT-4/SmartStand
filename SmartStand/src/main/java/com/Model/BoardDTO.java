@@ -18,6 +18,14 @@ public class BoardDTO {
 		this.day = day;
 	}
 
+	public BoardDTO(String sendName, String myEmail, String message, String category) {
+		super();
+		this.sendName = sendName;
+		this.myEmail = myEmail;
+		this.message = message;
+		this.category = category;
+	}
+
 	public int getNum() {
 		return num;
 	}
