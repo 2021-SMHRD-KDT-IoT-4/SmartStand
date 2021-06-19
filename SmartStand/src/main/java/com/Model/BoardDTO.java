@@ -4,10 +4,10 @@ public class BoardDTO {
 
 	private int num;
 	private String sendName;
+	private String category;
 	private String myEmail;
 	private String message;
 	private String day;
-	private String category;
 
 	public BoardDTO(int num, String sendName, String category, String myEmail, String message, String day) {
 		this.num = num;
@@ -16,6 +16,14 @@ public class BoardDTO {
 		this.myEmail = myEmail;
 		this.message = message;
 		this.day = day;
+	}
+
+	public BoardDTO(String sendName, String myEmail, String message, String category) {
+		super();
+		this.sendName = sendName;
+		this.myEmail = myEmail;
+		this.message = message;
+		this.category = category;
 	}
 
 	public int getNum() {
