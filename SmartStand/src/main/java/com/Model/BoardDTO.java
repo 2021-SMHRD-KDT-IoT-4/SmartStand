@@ -6,7 +6,6 @@ public class BoardDTO {
 	private String admin;
 	private String human;
 	private String message;
-	private String content;
 	private String day;
 	private String category;
 	
@@ -39,12 +38,6 @@ public class BoardDTO {
 	}
 	public void setMessage(String message) {
 		this.message = message;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
 	}
 	public String getDay() {
 		return day;
