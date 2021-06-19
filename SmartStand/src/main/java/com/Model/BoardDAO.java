@@ -80,7 +80,7 @@ public class BoardDAO {
 		conn();
 		
 		try {
-			String sql = "select * from web_board where receiveEmail =?";
+			String sql = "select * from web_board where myEmail =?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, name);
 			rs = psmt.executeQuery();
@@ -89,11 +89,11 @@ public class BoardDAO {
 				int num = rs.getInt(1);
 				String sendName = rs.getString(2);
 				String category = rs.getString(3);
-				String receiveEmail = rs.getString(4);
+				String myEmail = rs.getString(4);
 				String message = rs.getString(5);
 				String day = rs.getString(6);
 				
-				info = new BoardDTO(num, sendName, category, receiveEmail, message, day);
+				info = new BoardDTO(num, sendName, category, myEmail, message, day);
 				list.add(info);
 			}
 		} catch (SQLException e) {
@@ -108,7 +108,7 @@ public class BoardDAO {
 		conn();
 		
 		try {
-			String sql = "delete from web_board where receiveEmail = ?";
+			String sql = "delete from web_board where myEmail = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			cnt = psmt.executeUpdate();

@@ -45,13 +45,13 @@ public class MusicDAO {
 	}
 	
 
-	
-	public ArrayList<MusicDTO> songRecoMood() { //노래추천(분위기)
+	public ArrayList<MusicDTO> songRecoGenre(String genre) { //노래추천(장르)
 		   list = new ArrayList<MusicDTO>();
 		      conn();
 		      try {
-		    	  String sql = "select * from web_music where mood = ? ";
+		    	  String sql = "select * from web_music where genre = ? ";
 		         psmt = conn.prepareStatement(sql);
+		         psmt.setString(1, genre);
 		         rs = psmt.executeQuery();
 		         
 		        while(rs.next()) {
@@ -59,7 +59,7 @@ public class MusicDAO {
 		        	int num = rs.getInt(1);
 		        	String song = rs.getString(2);
 		        	String singer = rs.getString(3);
-		        	String genre = rs.getString(4);
+		        	genre = rs.getString(4);
 		            String cls = rs.getString(5);
 		            String mood = rs.getString(6);
 		            
@@ -73,13 +73,18 @@ public class MusicDAO {
 		      }
 		      return list;
 		   }
-
-	public ArrayList<MusicDTO> songRecoGenre() { //노래추천(장르)
+	
+	
+	
+	
+	
+	public ArrayList<MusicDTO> songRecoMood(String mood) { //노래추천(분위기)
 		   list = new ArrayList<MusicDTO>();
 		      conn();
 		      try {
-		    	  String sql = "select * from web_music where genre = ? ";
+		    	  String sql = "select * from web_music where mood = ? ";
 		         psmt = conn.prepareStatement(sql);
+		         psmt.setString(1, mood);
 		         rs = psmt.executeQuery();
 		         
 		        while(rs.next()) {
@@ -89,6 +94,35 @@ public class MusicDAO {
 		        	String singer = rs.getString(3);
 		        	String genre = rs.getString(4);
 		            String cls = rs.getString(5);
+		            mood = rs.getString(6);
+		            
+		            info = new MusicDTO(num, song, singer, genre, cls, mood);
+		            list.add(info);
+		         }
+		      } catch (SQLException e) {
+		         e.printStackTrace();
+		      } finally {
+		         close();
+		      }
+		      return list;
+		   }
+
+	public ArrayList<MusicDTO> songList(String cls) { //분류별 노래 리스트 
+		   list = new ArrayList<MusicDTO>();
+		      conn();
+		      try {
+		    	  String sql = "select * from web_music where cls = ? ";
+		         psmt = conn.prepareStatement(sql);
+		         psmt.setString(1, cls);
+		         rs = psmt.executeQuery();
+		         
+		        while(rs.next()) {
+		        	
+		        	int num = rs.getInt(1);
+		        	String song = rs.getString(2);
+		        	String singer = rs.getString(3);
+		        	String genre = rs.getString(4);
+		            cls = rs.getString(5);
 		            String mood = rs.getString(6);
 		            
 		            info = new MusicDTO(num, song, singer, genre, cls, mood);

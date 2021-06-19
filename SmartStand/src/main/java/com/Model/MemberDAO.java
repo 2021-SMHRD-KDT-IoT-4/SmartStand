@@ -60,12 +60,12 @@ public class MemberDAO {
 		try {
 			psmt = conn.prepareStatement(sql);
 			
-			psmt.setString(1, dto.getUser_Id());
-			psmt.setString(2, dto.getUser_Pw());
-			psmt.setString(3, dto.getUser_Name());
-			psmt.setString(4, dto.getUser_Tel());
-			psmt.setString(5, dto.getUser_Addr());
-			psmt.setString(6, dto.getUser_Email());
+			psmt.setString(1, dto.getId());
+			psmt.setString(2, dto.getPw());
+			psmt.setString(3, dto.getName());
+			psmt.setString(4, dto.getTel());
+			psmt.setString(5, dto.getAddr());
+			psmt.setString(6, dto.getEmail());
 			
 			cnt = psmt.executeUpdate();
 			
@@ -87,20 +87,20 @@ public class MemberDAO {
 		try {
 			psmt = conn.prepareStatement(sql);
 			
-			psmt.setString(1, dto.getUser_Id());
-			psmt.setString(2, dto.getUser_Pw());
+			psmt.setString(1, dto.getId());
+			psmt.setString(2, dto.getPw());
 			
 			rs = psmt.executeQuery();
 		
 			if(rs.next()) {
-				String user_Id = rs.getString(1); 
-				String user_Pw = rs.getString(2);
-				String user_Name = rs.getString(3); 
-				String user_Tel = rs.getString(4); 
-				String user_Addr = rs.getString(5); 
-				String user_Email = rs.getString(6); 
+				String id = rs.getString(1); 
+				String pw = rs.getString(2);
+				String name = rs.getString(3); 
+				String tel = rs.getString(4); 
+				String addr = rs.getString(5); 
+				String email = rs.getString(6); 
 				
-				info = new MemberDTO(user_Id, user_Pw, user_Name, user_Tel,user_Addr,user_Email);
+				info = new MemberDTO(id, pw, name, tel,addr,email);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -118,11 +118,11 @@ public class MemberDAO {
 				
 				try {
 					psmt = conn.prepareStatement(sql);
-					psmt.setString(1, dto.getUser_Pw());
-					psmt.setString(2, dto.getUser_Tel());
-					psmt.setString(3, dto.getUser_Addr());
-					psmt.setString(4, dto.getUser_Email());
-					psmt.setString(5, dto.getUser_Id());
+					psmt.setString(1, dto.getPw());
+					psmt.setString(2, dto.getTel());
+					psmt.setString(3, dto.getAddr());
+					psmt.setString(4, dto.getEmail());
+					psmt.setString(5, dto.getId());
 					
 					cnt = psmt.executeUpdate();
 					
