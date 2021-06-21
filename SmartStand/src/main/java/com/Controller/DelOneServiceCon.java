@@ -27,7 +27,7 @@ public class DelOneServiceCon extends HttpServlet {
 
 		response.sendRedirect("customerservice.jsp");
 
-		
+		 
 	}
 
 }
