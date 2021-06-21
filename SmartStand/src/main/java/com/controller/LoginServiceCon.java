@@ -1,4 +1,4 @@
-package com.Controller;
+package com.controller;
 
 import java.io.IOException;
 
@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.Front.Command;
-import com.Model.MemberDAO;
-import com.Model.MemberDTO;
+import com.front.Command;
+import com.model.MemberDAO;
+import com.model.MemberDTO;
 
 public class LoginServiceCon implements Command {
 
