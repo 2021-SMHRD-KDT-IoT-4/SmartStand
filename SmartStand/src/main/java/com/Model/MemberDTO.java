@@ -15,6 +15,7 @@ public class MemberDTO {
 		return id;
 	}
 
+
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -69,6 +70,12 @@ public class MemberDTO {
 		this.tel = tel;
 		this.addr = addr;
 		this.email = email;
+	}
+	
+	public MemberDTO(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
 	}
 	
 }	
