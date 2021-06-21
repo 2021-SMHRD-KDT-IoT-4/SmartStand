@@ -1,4 +1,4 @@
-package com.Controller;
+package com.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.Model.BoardDAO;
-import com.Model.BoardDTO;
+import com.model.BoardDAO;
+import com.model.BoardDTO;
 
 
 @WebServlet("/MessageServiceCon")

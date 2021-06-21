@@ -3567,6 +3567,7 @@ body.landing #header {
 	width: 100%;
 }
 
+<<<<<<< HEAD
 #banner .content {
 	display: inline-block;
 	margin-right: 1%;
@@ -3577,6 +3578,21 @@ body.landing #header {
 	vertical-align: middle;
 	z-index: 1;
 }
+=======
+		#banner:after {
+			/* background-image: -moz-linear-gradient(top, rgba(6, 32, 226, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -webkit-linear-gradient(top, rgba(43, 51, 111, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -ms-linear-gradient(top, rgba(43, 48, 84, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: linear-gradient(top, rgba(20, 21, 28, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");; */
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
 
 #banner .content header {
 	display: inline-block;

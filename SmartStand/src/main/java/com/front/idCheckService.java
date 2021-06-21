@@ -1,4 +1,4 @@
-package com.Front;
+package com.front;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.Model.MemberDAO;
+import com.model.MemberDAO;
 
 @WebServlet("/idCheckService")
 public class idCheckService extends HttpServlet {

@@ -1,4 +1,4 @@
-package com.Front;
+package com.front;
 
 import java.io.IOException;
 
