@@ -12,8 +12,8 @@ create table web_board(
    constraint web_board_num_pk primary key(num)
  );
  
- create sequence web_board
- increment by 1 
+create sequence web_board_num_seq 
+increment by 1 
  start with 1
  maxvalue 99;
  
@@ -23,13 +23,13 @@ create table web_board(
  
  
  
- 
  //////////////////////////////////////////////
  
  
 web_member
-
-create table web_member( 
+ 
+ 
+ create table web_member( 
    id varchar2(500),
    pw varchar2(500),
    name varchar2(500),
@@ -38,8 +38,6 @@ create table web_member(
    email varchar2(500),
    constraint web_member_id_pk primary key(id)
  );
- 
- 
  select * from web_member;
  
  drop table web_member;
@@ -49,8 +47,9 @@ create table web_member(
  
  
 web_music
-
-create table web_music( 
+ 
+ 
+ create table web_music( 
    num number,
    song varchar2(500),
    singer varchar2(500),
@@ -60,8 +59,8 @@ create table web_music(
    constraint web_music_num_pk primary key(num)
  );
  
- 
- create sequence web_music
+
+ create sequence web_music_num_seq
  increment by 1 
  start with 1
  maxvalue 99;
