@@ -76,7 +76,13 @@
         }
         #open {
             all: unset;
-            padding: 5px 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+			width: 30px;
+        }
+        #open2 {
+            all: unset;
             border-radius: 5px;
             cursor: pointer;
 			width: 50px;
@@ -149,6 +155,7 @@
 							<li><a href="Question.html">Q&A</a></li>
 							
 							<li><button id = "open" style = "z-index: 1500;" >Login</button></li>
+							<li><button id = "open2" style = "z-index: 1500;" >Join</button></li>
 							<!-- <li><a href="login.html" class="button primary">Login</a></li>-->
 						</ul>
 					</nav>
