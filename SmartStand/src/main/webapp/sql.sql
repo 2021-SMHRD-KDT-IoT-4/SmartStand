@@ -40,6 +40,8 @@ web_member
  );
  select * from web_member;
  
+ delete from web_member;
+ 
  drop table web_member;
  
  

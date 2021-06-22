@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.controller.Command;
+import com.controller.JoinServiceCon;
 import com.controller.LoginServiceCon;
 
 //import com.controller.DeleteAllServiceCon;
@@ -42,7 +43,10 @@ public class FrontController extends HttpServlet {
 //			inter = new JoinServiceCon();
 		//}else
 			if(resultURI.equals("LoginServiceCon.do")) {
-			inter = new LoginServiceCon();}
+				inter = new LoginServiceCon();
+			}else if(resultURI.equals("JoinServiceCon.do")) {
+				inter = new JoinServiceCon();
+			}
 //		}else if(resultURI.equals("LogoutServireCon.do")) {
 //			inter = new LogoutServireCon();
 //		}else if(resultURI.equals("MessageServiceCon.do")) {
