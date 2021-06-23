@@ -28,20 +28,20 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="main.html">SmartStand</a></h1>
+					<h1 id="logo"><a href="main.jsp">SmartStand</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="main.html">Main</a></li>
+							<li><a href="main.jsp">Main</a></li>
 							<li>
-								<a href="#">mypage</a>
+								<a href="#">Mypage</a>
 								<ul>
-									<li><a href="myinfo.html">내 정보</a></li>
-									<li><a href="myset.html">개인 설정</a></li>
+									<li><a href="myinfo.jsp">내 정보</a></li>
+									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
-							<li><a href="weather.html">weather</a></li>
-							<li><a href="Question.html">Q&A</a></li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
+							<li><a href="weather.html">Weather</a></li>
+							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="#" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -102,12 +102,12 @@
 										</div>
 										<div></div>
 										<div>
-										<ul>
+										<ul style = "padding-left: 50px; margin-top: 9px;">
 											<il>
 												<input type="submit" value="Send Message">
 											</il>
 											<il>
-												<input type="submit" value="Clear">
+												<input type="submit" value="Clear" style="margin-left: 40px;">
 											</il>
 										</ul>
 									</div>

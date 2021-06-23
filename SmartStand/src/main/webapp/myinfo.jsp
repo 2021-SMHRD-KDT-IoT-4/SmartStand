@@ -15,20 +15,20 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="main.html">SmartStand</a></h1>
+					<h1 id="logo"><a href="main.jsp">SmartStand</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="main.html">Main</a></li>
+							<li><a href="main.jsp">Main</a></li>
 							<li>
 								<a href="#">MyPage</a>
 								<ul>
-									<li><a href="myinfo.html">내 정보</a></li>
-									<li><a href="myset.html">개인 설정</a></li>
+									<li><a href="myinfo.jsp">내 정보</a></li>
+									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
-							<li><a href="weather.html">날씨정보</a></li>
-							<li><a href="Question.html">문의사항</a></li>
-							<li><a href="#" class="button primary">Login</a></li>
+							<li><a href="weather.html">Weather</a></li>
+							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Logout</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -37,13 +37,13 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>내 정보</h2>
+							<h2>프로필</h2>
 						</header>
 
 						<!-- Table -->
 							<section>
-								<h3 align="center">내 정보</h3>
-								<div class="table-wrapper" align="center">
+<!-- 								<h3 align="center">내 정보</h3>
+ -->								<div class="table-wrapper" align="center">
 									<table >
 										<tbody >
 											<tr>
