@@ -2815,11 +2815,11 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
-		form div {
+		/* form div {
 			width: 40%;
 			float: left;
 			padding: 1em;
-		}
+		} */
 	
 		
 		
