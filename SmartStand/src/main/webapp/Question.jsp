@@ -1,20 +1,22 @@
-
-
-<!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Question - Landed by HTML5 UP</title>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+
+
+
+</head>
+
+
+<body class="is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -26,8 +28,8 @@
 							<li>
 								<a href="#">mypage</a>
 								<ul>
-									<li><a href="myinfo.html">ë‚´ ì •ë³´</a></li>
-									<li><a href="myset.html">ê°œì¸ ì„¤ì •</a></li>
+									<li><a href="myinfo.html">³» Á¤º¸</a></li>
+									<li><a href="myset.html">°³ÀÎ ¼³Á¤</a></li>
 								</ul>
 							</li>
 							<li><a href="weather.html">weather</a></li>
@@ -43,37 +45,37 @@
 						<div>
 							<section>
 								<header class="major">
-									<h2>ë¬¸ì˜ì‚¬í•­</h2>
+									<h2>¹®ÀÇ»çÇ×</h2>
 									
 								</header>
 							</section>
 						</div>
 						<!-- Table -->
 							<section>
-								<h3>ë¬¸ì˜ëª©ë¡</h3>
+								<h3>¹®ÀÇ¸ñ·Ï</h3>
 								<div class="table-wrapper">
 									<table>
 										<thead>
 											<tr>
-												<th>ë²ˆí˜¸</th>
-												<th>ë©”ì„¸ì§€</th>
-												<th>ì´ë¦„</th>
-												<th>ì‹œê°„</th>
+												<th>¹øÈ£</th>
+												<th>¸Þ¼¼Áö</th>
+												<th>ÀÌ¸§</th>
+												<th>½Ã°£</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>ë²ˆí˜¸</td>
-												<td>ë©”ì„¸ì§€</td>
-												<td>ì´ë¦„</td>
-												<td>ìž‘ì„±ì¼ìž</td>
+												<td>¹øÈ£</td>
+												<td>¸Þ¼¼Áö</td>
+												<td>ÀÌ¸§</td>
+												<td>ÀÛ¼ºÀÏÀÚ</td>
 											</tr>
 											
 										</tbody>
 										
 									</table>
 								</div>
-								<h4>ë¬¸ì˜ìž‘ì„±</h4>
+								<h4>¹®ÀÇÀÛ¼º</h4>
 								<div class="table-wrapper">
 									<form>
 										
@@ -135,5 +137,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
+
+
+</body>
 </html>

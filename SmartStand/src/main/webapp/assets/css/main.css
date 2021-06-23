@@ -72,6 +72,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 /* Basic */
 
 	html {
@@ -2180,9 +2181,11 @@ input, select, textarea {
 	}
 
 	header.major {
+		background-image: url(../../images/pic09.jpg);
 		margin: 0 0 4em 0;
 		position: relative;
 		text-align: center;
+		
 	}
 
 		header.major:after {
@@ -2815,7 +2818,14 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
-
+		form div {
+			width: 40%;
+			float: left;
+			padding: 1em;
+		}
+	
+		
+		
 /* Button */
 
 	input[type="submit"],
@@ -3055,13 +3065,13 @@ input, select, textarea {
 		}
 
 		.spotlight:before {
-			background-image: url("images/overlay.png");
+			/*background-image: url("images/overlay.png");
 			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
 			top: 0;
-			width: 100%;
+			width: 100%; */
 		}
 
 		.spotlight .image.main {
@@ -4249,3 +4259,4 @@ input, select, textarea {
 					}
 
 	}
+		
