@@ -15,12 +15,11 @@
 		#table{
 			text-align: center;
 		}
-        .login_btn {
-            background-color: #1f1919 !important;
+        /* .login_btn {
             color: #fff !important;
             font-size: 30px !important;
             
-        }
+        } */
 
         #title {
             font-size: 60px !important;
@@ -37,7 +36,7 @@
             height: 50px;
             font-size: 20px  !important;
 			border-color: black !important;
-			color: black !important;
+			color: rgba(255,255,255,0.75) !important;
 			padding-top: 25px !important;
 			border: solid 0px !important;
         }
@@ -122,10 +121,47 @@
             z-index: 1300;
 			margin-bottom: 10%;
         }
+        
+        
+        .modal1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+             z-index: 900;
+        }
+
+        .modal_overlay1 {
+            background-color: rgba(0, 0, 0, 0.6) !important;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+			opacity: inherit;
+        }
+
+        .modal_content1 {
+            position: relative;
+            top: 0px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            padding: 0px 40px;
+            text-align: center;
+            width: 30%;
+            z-index: 1300;
+			margin-bottom: 10%;
+        }
+        
 
         .hidden {
             display: none;
 			background-color: rgba(255, 255, 255, 0.842);;
+        }
+        
+        .input1 {
+			
+			height: 2.7em !important;
+			background-color: rgba(255, 255, 255, 0) !important;
+		        
         }
 	</style>
 		
@@ -279,7 +315,7 @@
 	<div class="modal hidden" align = "center" >
 		<div class="modal_overlay"></div>
 		<div class="modal_content">
-			<table width="100%" align="center" style="margin-top: 100px;" id="table">
+			<table width="100%" align="center" style="margin-top: 160px; margin-bottom: 0px; border-collapse: unset;" id="table ">
 				<tr height="150px" style="background-color: rgba(255, 255, 255, 0);">
 					<td colspan="2" align="center"><a href="main" class="a" >
 						<h1 id="title">스마트우산꽂이</h1>
@@ -287,33 +323,84 @@
 			</tr>
 			<tr height="120px"style="background-color: rgba(255, 255, 255, 0);">
 				<td colspan="2" align="center" style = "color: white" >ID<input type="text" name = "id" placeholder="ID를 입력해주세요" class="input" height="70px" >
+				<hr style = "margin-top: 0px; margin-bottom: 0px;">
 				</td>
 			</tr>
 			<tr height="120px"style="background-color: rgba(255, 255, 255, 0);">
-				<td colspan="2" align="center" style = "color: white" >PW<input type="text" name = "pw" placeholder="PW를 입력해주세요" class="input"></td>
+				<td colspan="2" align="center" style = "color: white" >PW<input type="text" name = "pw" placeholder="PW를 입력해주세요" class="input">
+				<hr style = "margin-top: 0px; margin-bottom: 0px;">
+				</td>
+				
 			</tr>
 			<tr height="50px"style="background-color: rgba(255, 255, 255, 0);">
 				<td class="b" align="center" ><a href="" id="d" >ID/PW찾기</a></td>
 
 				<td class="c"><a href="Join.html" id="e" >회원가입</a></td>
 			</tr>
-			<tr height="70px" align="center"style="background-color: rgba(255, 255, 255, 0);">
+			<tr height="70px" align="center" style="background-color: rgba(255, 255, 255, 0);">
 				<td colspan="2"><input type="submit" value="Login" class="login_btn" ></td>
 			</tr>
 
 		</table>
 		
-		<button>X</button>
+		<button style = "border-color: transparent; background-color: transparent;"></button>
 	</div>
 	</div>
 	</form>
+	
+	
+	<form action = "JoinServiceCon.do">
+	<div class="modal1 hidden" align = "center" >
+		<div class="modal_overlay1"></div>
+		<div class="modal_content1">
+			 <table width="800px"  align="center" style="margin-top: 70px; margin-bottom: 0px; border-collapse: unset;">
+            
+            <tr height="130px" style="background-color: rgba(255, 255, 255, 0);" >
+                <td  align="center"><h1 id="title">회원가입</h1></td>
+            </tr>
+            <tr>
+                <td  align="center"><input type = "text" placeholder ="ID를 입력해주세요" class="input1" height="70px" name="id"></td>
+            </tr>
+            <tr style="background-color: rgba(255, 255, 255, 0);">
+                <td  align="center"><input type = "text" placeholder ="PW를 입력해주세요" class="input1" height="70px" name="pw"></td>
+            </tr>
+            <tr>
+                <td  align="center"><input type = "text" placeholder ="NAME를 입력해주세요" class="input1" height="70px" name="name"></td>
+            </tr>
+            <tr style="background-color: rgba(255, 255, 255, 0);">
+                <td  align="center"><input type = "text" placeholder ="Tel을 입력해주세요" class="input1" height="70px" name="tel"></td>
+            </tr>
+            <tr>
+                <td align="center"><input type = "text" placeholder ="Addr를 입력해주세요" class="input1" height="70px" name="addr"></td>
+            </tr>
+            <tr style="background-color: rgba(255, 255, 255, 0);"> 
+                <td align="center"><input type = "text" placeholder ="Email를 입력해주세요" class="input1" height="70px" name="email"></td>
+            </tr>
+            <tr height="100px"align="center" style="background-color: rgba(255, 255, 255, 0);">
+                <td colspan ="2"><input type = "submit" value="Join" class = "join_btn"></td>
+            </tr>
+            
+        </table>
+		
+		<button style = "border-color: transparent; background-color: transparent;"></button>
+		
+	</div>
+	</div>
+	</form>
+	
+	
+	
 
 	<script src="assets/js/jquery.min.js"></script>
 	<script>
 		const openButton = document.getElementById("open");
+		const openButton1 = document.getElementById("open2");
 		const modal = document.querySelector(".modal");
 		const overlay = modal.querySelector(".modal_overlay");
+		const modal1 = document.querySelector(".modal1");
+		const overlay1 = modal1.querySelector(".modal_overlay1");
 		const closeBtn = modal.querySelector("button");
+		const closeBtn1 = modal1.querySelector("button");
 
 		const openModal = () => {
 			modal.classList.remove("hidden", "display:block")
@@ -330,10 +417,28 @@
 			$('#nav').css('-webkit-filter', 'none');
 			$('#nav').css('filter','none');
 		}
+		
+		const openModal1 = () => {
+			modal1.classList.remove("hidden", "display:block")
+			$('#banner').css('-webkit-filter', 'blur(0.5em)');
+			$('#banner').css('filter','blur(0.5em)');
+			$('#nav').css('-webkit-filter', 'blur(0.5em)');
+			$('#nav').css('filter','blur(0.5em)');
+			
+		}
+		const closeModal1 = () =>{
+			modal1.classList.add("hidden", "display:none");
+			$('#banner').css('-webkit-filter', 'none');
+			$('#banner').css('filter','none');
+			$('#nav').css('-webkit-filter', 'none');
+			$('#nav').css('filter','none');
+		}
 		overlay.addEventListener("click",closeModal);
 		closeBtn.addEventListener("click",closeModal);
 		openButton.addEventListener("click",openModal);
-
+		overlay1.addEventListener("click",closeModal1);
+		closeBtn1.addEventListener("click",closeModal1);
+		openButton1.addEventListener("click",openModal1);
 
 	</script>
 
