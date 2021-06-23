@@ -32,9 +32,9 @@ $(document).ready(function() {
                 //$("#msg").html(data);
 
                 if(data.on == 1) {
-                    $("#led").html("<img src='./src/webapp/images/on.png' >");
+                    $("#led").html("<img src='images/off.png' >");
                 } else {
-                    $("#led").html("<img src='./src/webapp/images/off.PNG' >");
+                    $("#led").html("<img src='images/on.png' >");
                 }
             },
             //error : function() {
@@ -48,55 +48,66 @@ $(document).ready(function() {
 </script>
 
 <style>
-body {
-	height: 50vh;
+
+body{
+background-color: #1c1d26;
+
+}
+.lmain{
+	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #1c1d26;
 }
 
-h2 {
+h1 {
 	color: white;
 }
 
-.select {
-	position: relative;
-}
 
-.btn {
-	position: relative;
-	
-	
+.led{
+
+height:50%;
+width:50%;
+align-content: center;
+size: 50%;
 }
+	
 </style>
+
 
 
 </head>
 <body>
 
-	<div align = "center">
-		<section>
-			<h2 align="center">LED ON/OFF</h2>
-		</section>
+	<div class="lmain" >
 		
-		<section>
-			<select name="onoff" id="onoff" >
-				<option>::: 전원선택 :::</option>
-				<option value="1">OFF</option>
-				<option value="0">ON</option>
-			</select>
-		</section>
-		<h1></h1>
-		
-		<section>
-			<input type="button" id="btn" value="ON/OFF 해주세요.">
-		</section>
-		<div id="msg"></div>
-		<div id="led"></div> 
-
+			<h1>LED ON/OFF</h1>
+			
 	</div>
+	<br>
+	
+	
+	<div class="lmain">
+		<select name="onoff" id="onoff" >
+			<option>::: 전원선택 :::</option>
+			<option value="1">OFF</option>
+			<option value="0">ON</option>
+		</select>
+	</div>
+		
+		<br>
+	<div class="lmain">
+		<input type="button" id="btn" value="ON/OFF 해주세요.">
+	</div>
+		<br>
+		
+		<!-- <div id="msg"></div> -->
+		
+	<div id="led"  align="center"></div> 
+
+	
 </body>
 
 </html>
