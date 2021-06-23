@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.controller.Command;
 import com.controller.JoinServiceCon;
 import com.controller.LoginServiceCon;
+import com.controller.LogoutServireCon;
 
 //import com.controller.DeleteAllServiceCon;
 //import com.controller.DeleteOneServiceCon;
@@ -46,9 +47,10 @@ public class FrontController extends HttpServlet {
 				inter = new LoginServiceCon();
 			}else if(resultURI.equals("JoinServiceCon.do")) {
 				inter = new JoinServiceCon();
-			}
-//		}else if(resultURI.equals("LogoutServireCon.do")) {
-//			inter = new LogoutServireCon();
+			}else if(resultURI.equals("LogoutServireCon.do")) {
+				inter = new LogoutServireCon();
+			}	
+		
 //		}else if(resultURI.equals("MessageServiceCon.do")) {
 //			inter = new MessageServiceCon();
 //		}else if(resultURI.equals("UpdateServiceCon.do")) {
