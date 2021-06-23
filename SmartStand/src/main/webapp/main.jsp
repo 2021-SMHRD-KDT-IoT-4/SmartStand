@@ -81,6 +81,13 @@
             cursor: pointer;
 			width: 30px;
         }
+         #logout {
+            all: unset;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+			width: 80px;
+        }
         #open2 {
             all: unset;
             border-radius: 5px;
@@ -138,12 +145,15 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="main.html">SmartStand</a></h1>
+					<h1 id="logo"><a href="main.jsp">SmartStand</a></h1>
 					<nav id="nav">
 					
 						<ul>
 							
-							<li><a href="main.html">Main</a></li>
+							<%
+						if(info==null){
+						%>
+								<li><a href="main.jsp">Main</a></li>
 							<li>
 								<a href="#">MyPage</a>
 								<ul>
@@ -156,7 +166,27 @@
 							
 							<li><button id = "open" style = "z-index: 1500;" >Login</button></li>
 							<li><button id = "open2" style = "z-index: 1500;" >Join</button></li>
-							<!-- <li><a href="login.html" class="button primary">Login</a></li>-->
+							<%
+							} else{%>
+								
+								<li><a href="main.jsp">Main</a></li>
+							<li>
+								<a href="#">MyPage</a>
+								<ul>
+									<li><a href="myinfo.html">내 정보</a></li>
+									<li><a href="myset.html">개인 설정</a></li>
+								</ul>
+							</li>
+							<li><a href="weather.html">Weather</a></li>
+							<li><a href="Question.html">Q&A</a></li>
+							
+							<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
+									
+							<%}%>	
+							
+							
+						
+							
 						</ul>
 					</nav>
 				</header>
