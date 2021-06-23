@@ -45,19 +45,19 @@
 						</header>
 						
 					</div>
-					<a href="#bann" class="goto-next scrolly">Next</a>
+					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
 
 			<!-- One -->
 
 			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
+				<!-- <section id="two" class="spotlight style2 right">
 
 
 
 
 					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+				</section> -->
 
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
@@ -70,9 +70,6 @@
 							<option>남성</option>
 							<option>여성</option>
 						</select>
-						<audio src="lilac.mp3/lilac.mp3" controls="controls" ></audio>
-						<input type="button" value="on">
-						
 						<br>
 						<span>Song</span>
 						<select>
@@ -80,7 +77,6 @@
 							<option>라일락</option>
 							<option>가을아침</option>
 						</select>
-						<audio src="lilac.mp3/lilac.mp3" controls="controls" ></audio>
 						<br>
 						<span>Asmr</span>
 						<select>

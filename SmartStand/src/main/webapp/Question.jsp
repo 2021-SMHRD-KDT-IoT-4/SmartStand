@@ -11,7 +11,14 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-
+	<style>
+	
+	form div {
+			width: 40%;
+			float: left;
+			padding: 1em;
+		}
+	</style>
 
 </head>
 
@@ -76,6 +83,7 @@
 									</table>
 								</div>
 								<h4>문의작성</h4>
+								
 								<div class="table-wrapper">
 									<form>
 										

@@ -2815,7 +2815,11 @@ input, select, textarea {
 			table.alt tfoot {
 				border-top: 0;
 			}
+<<<<<<< HEAD
 		/*  form div {
+=======
+		/* form div {
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
 			width: 40%;
 			float: left;
 			padding: 1em;
