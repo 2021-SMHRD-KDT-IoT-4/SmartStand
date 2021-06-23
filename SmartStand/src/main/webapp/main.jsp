@@ -120,6 +120,7 @@
             width: 30%;
             z-index: 1300;
 			margin-bottom: 10%;
+			
         }
         
         
