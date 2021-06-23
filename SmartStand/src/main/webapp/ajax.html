@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<title>Insert title here</title>
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+    $("#btn").click(function() {
+
+        var led = $("#onoff").val();
+
+        $.ajax({
+            url : "ajax.do", //AjaxController
+            type : "get",
+            dataType : "json",
+            data : { "led" : led },
+
+            //success : function(data){
+
+            success : (data) => {
+
+                $("#msg").html(data.sensor+" : "+data.on);
+
+                //$("#msg").html(data);
+
+                if(data.on == 1) {
+                    $("#led").html("<img src='images/on.PNG' >");
+                } else {
+                    $("#led").html("<img src='images/off.PNG' >");
+                }
+            },
+            //error : function() {
+            error : () => {
+                alert('실패');
+            }
+        });
+    });
+});
+
+</script>
+
+<style>
+body {
+	height: 50vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1c1d26;
+}
+
+h2 {
+	color: white;
+}
+
+.select {
+	position: relative;
+}
+
+.btn {
+	position: relative;
+	
+	
+	
+}
+</style>
+
+
+
+</head>
+<body>
+	<div align = "center">
+		<section>
+			<h2 align="center">LED ON/OFF</h2>
+		</section>
+		
+		<section>
+			<select name="onoff" id="onoff" >
+				<option>::: 전원선택 :::</option>
+				<option value="1">ON</option>
+				<option value="0">OFF</option>
+			</select>
+		</section>
+		<h1></h1>
+		
+		<section>
+			<input type="button" id="btn" value="ON/OFF 해주세요.">
+		</section>
+		<div id="msg"></div>
+		<div id="led"></div> 
+
+	</div>
+</body>
+
+</html>
