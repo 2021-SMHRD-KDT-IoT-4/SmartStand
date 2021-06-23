@@ -18,7 +18,7 @@ $(document).ready(function() {
         var led = $("#onoff").val();
 
         $.ajax({
-            url : "ajax.do", //AjaxController
+            url : "LedController", //LedController
             type : "get",
             dataType : "json",
             data : { "led" : led },
@@ -32,9 +32,9 @@ $(document).ready(function() {
                 //$("#msg").html(data);
 
                 if(data.on == 1) {
-                    $("#led").html("<img src='images/on.PNG' >");
+                    $("#led").html("<img src='./src/webapp/images/on.png' >");
                 } else {
-                    $("#led").html("<img src='images/off.PNG' >");
+                    $("#led").html("<img src='./src/webapp/images/off.PNG' >");
                 }
             },
             //error : function() {
@@ -69,14 +69,13 @@ h2 {
 	position: relative;
 	
 	
-	
 }
 </style>
 
 
-
 </head>
 <body>
+
 	<div align = "center">
 		<section>
 			<h2 align="center">LED ON/OFF</h2>

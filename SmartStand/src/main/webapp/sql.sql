@@ -71,5 +71,14 @@ web_music
  
  drop table web_music;
  
+ ///////////////////////////////////////////////
  
+ create table ledonoff( 
+   led varchar2(10),
+   constraint ledonoff_led_pk primary key(led)
+ );
  
+ insert into ledonoff values('0');
+ 
+ select * from ledonoff;
+ drop table ledonoff;
