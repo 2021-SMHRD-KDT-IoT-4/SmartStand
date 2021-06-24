@@ -1,4 +1,3 @@
-<%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -11,19 +10,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/slider.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script type="text/javascript">
-
-
-
-</script>
+	
 </head>
 <body class="is-preload landing">
-
-	<%
-		//로그인을 했을 때 저장한 session 값 불러오기
-			MemberDTO info = (MemberDTO)session.getAttribute("login_info");
-		%>
-
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -39,19 +28,9 @@
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
-							<%if(info==null){%>
 							<li><a href="weather.html">Weather</a></li>
 							<li><a href="Question.jsp">Q&A</a></li>
-<<<<<<< HEAD
 							<li><a href="login.html" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
-=======
-							<li><a href="#" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Login</a></li>
-							<%}else{%>
-							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
-							<li><a href="LogoutServireCon.do" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
-							<%}%>	
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
 						</ul>
 					</nav>
 				</header>
