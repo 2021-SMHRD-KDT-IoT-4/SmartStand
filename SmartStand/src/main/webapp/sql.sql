@@ -5,7 +5,7 @@ web_board
 create table web_board( 
    num number,
    Qtitle varchar2(500),
-   sendName varchar2(500),
+   id varchar2(500),
    category varchar2(500),
    message varchar2(500),
    day date,

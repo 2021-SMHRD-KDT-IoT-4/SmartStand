@@ -208,7 +208,7 @@
 
 										<li><a href="main.jsp">Main</a></li>							
 										<li><a href="weather.html">Weather</a></li>
-										<li><a href="Question.jsp">Q&A</a></li>							
+										<li><a href="AdminQ&A.jsp">Q&A</a></li>							
 										<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
 										<%
 							}else{

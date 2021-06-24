@@ -15,7 +15,6 @@ public class MemberDTO {
 		return id;
 	}
 
-
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -76,6 +75,12 @@ public class MemberDTO {
 		super();
 		this.id = id;
 		this.pw = pw;
+	}
+	
+	
+	public MemberDTO(String name) {
+		super();
+		this.name = name;
 	}
 	
 }	

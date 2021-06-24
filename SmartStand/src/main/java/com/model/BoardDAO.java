@@ -139,4 +139,38 @@ public class BoardDAO {
 		}
 		return cnt;
 	}
+	
+public ArrayList<BoardDTO> showBoard() {
+		
+		ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
+		conn();
+		
+		String sql = "select * from web_board order by day desc";
+		
+		try {
+			psmt = conn.prepareStatement(sql);
+			
+			rs = psmt.executeQuery();
+
+			while(rs.next()) {
+				int num = rs.getInt(1);
+				String id = rs.getString(3);
+				String Qtilte = rs.getString(2);
+				String category = rs.getString(4);
+				String Message = rs.getString(5);
+				String day = rs.getString(6);
+				
+				info = new BoardDTO(num, id, Qtilte, category, Message, day);
+				
+				list.add(info);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return list;
+	}
+	
 }
