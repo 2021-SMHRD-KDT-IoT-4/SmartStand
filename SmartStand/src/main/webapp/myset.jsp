@@ -10,6 +10,19 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/slider.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<style>
+		
+		#two {
+		
+			background-size: cover; 
+			background-image: url('images/03d.png');
+			background-repeat: no-repeat;
+    		background-position: center;
+		
+		}
+		
+		</style>
 	
 </head>
 <body class="is-preload landing">
@@ -52,7 +65,7 @@
 			<!-- One -->
 
 			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
+				<section id="two" class="spotlight style2 right" >
 						<div style="margin-top: 20%;" align="center">
 		
 						<p style="font-size: 35px "><strong>LED ON/OFF</strong></p>
