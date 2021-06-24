@@ -203,7 +203,16 @@
 							<li><button id = "open" style = "z-index: 1500;" >Login</button></li>
 							<li><button id = "open2" style = "z-index: 1500;" >Join</button></li>
 							<%
-							} else{%>
+							} else if(info.getId().equals("admin")){%>
+								
+
+										<li><a href="main.jsp">Main</a></li>							
+										<li><a href="weather.html">Weather</a></li>
+										<li><a href="Question.jsp">Q&A</a></li>							
+										<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
+										<%
+							}else{
+							%>							
 								
 								<li><a href="main.jsp">Main</a></li>
 							<li>
