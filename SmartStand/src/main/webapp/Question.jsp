@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html>
+<html style="background-size: cover; background-image: url(images/rain4.jpg)">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -24,7 +24,7 @@
 </head>
 
 
-<body class="is-preload">
+<body class="is-preload" style="background: transparent;">
 
 	<%
 		//로그인을 했을 때 저장한 session 값 불러오기
@@ -34,7 +34,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
+				<header id="header" id="header" style="background: transparent;">
 					<h1 id="logo"><a href="main.jsp">SmartStand</a></h1>
 					<nav id="nav">
 						<ul>
@@ -74,11 +74,12 @@
 				</header>
 
 			<!-- Main -->
-				<div id="main" class="wrapper style1">
+				<div id="main" class="wrapper style1" style="
+    padding-top: 50px;">
 					<div class="container">
 						<div>
 							<section>
-								<header class="major">
+								<header class="major" style = "margin-bottom: 30px;">
 									<h2>문의사항</h2>
 									
 								</header>
@@ -146,7 +147,7 @@
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer">
+				<footer id="footer" style = "background: transparent;">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
