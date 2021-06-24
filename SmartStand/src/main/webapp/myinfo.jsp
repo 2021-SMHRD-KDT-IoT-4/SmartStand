@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html>
+<html style="background-size: cover; background-image: url(images/rain3.jpg)">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="is-preload">
+<body class="is-preload" style="background: transparent;">
 
 	<%
 		//로그인을 했을 때 저장한 session 값 불러오기
@@ -22,7 +22,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
+				<header id="header" style="background: transparent;">
 					<h1 id="logo"><a href="main.jsp">SmartStand</a></h1>
 					<nav id="nav">
 						<ul>
@@ -62,13 +62,13 @@
 							<section>
 <!-- 								<h3 align="center">내 정보</h3>
  -->								<div class="table-wrapper" align="center">
-									<table >
+									<table style="width: 30% !important; text-align: center;";>
 										<tbody >
 										
 										<%if(info==null){%>
 										
 											<tr>
-												<td>이름</td>
+												<td style="width: 130px !important;">이름</td>
 												<td>-</td>
 												
 											</tr>
@@ -88,7 +88,7 @@
 											</tr>
 											<%}else{%>
 											<tr>
-												<td>이름</td>
+												<td style="width: 130px !important;">이름</td>
 												<td><%=info.getName() %></td>
 												
 											</tr>
@@ -121,8 +121,22 @@
 					</div>
 				</div>
 
+
+			<footer id="footer" style = "background: transparent;">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
 			<!-- Footer -->
-				<footer id="footer">
+				<!-- <footer id="footer"> -->
 					<!-- 
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
@@ -133,7 +147,7 @@
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 					-->
-				</footer>
+				<!-- </footer> -->
 
 		</div>
 

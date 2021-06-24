@@ -18,11 +18,10 @@ public class MessageServiceCon extends HttpServlet {
 		
 		request.setCharacterEncoding("EUC-KR");
 		String sendName = request.getParameter("sendName");
-		String myEmail = request.getParameter("myEmail");
 		String message = request.getParameter("message");
-		String category = request.getParameter("category");
+		String myEmail = request.getParameter("myEmail");
 
-		BoardDTO dto = new BoardDTO(sendName, myEmail, message, category);
+		BoardDTO dto = new BoardDTO(sendName, myEmail, message);
 		BoardDAO dao = new BoardDAO();
 		int cnt = dao.insertMessage(dto);
 
