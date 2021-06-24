@@ -74,8 +74,7 @@
 				</header>
 
 			<!-- Main -->
-				<div id="main" class="wrapper style1" style="
-    padding-top: 50px;">
+				<div id="main" class="wrapper style1" style="padding-top: 50px;">
 					<div class="container">
 						<div>
 							<section>
@@ -87,28 +86,46 @@
 						</div>
 						<!-- Table -->
 							<section>
-								
+							<h3>문의목록</h3>
+									<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>번호</th>
+												<th>이름</th>
+												<th>메세지</th>
+												<th>답변여부</th>
+											</tr>
+											</thead>
+												<tbody>
+													<tr>
+														<td>번호</td>
+														<td>이름</td>
+														<td>메세지</td>
+														<td>작성일자</td>
+													</tr>
+																				
+												</tbody>
+																			
+												</table>
+									</div>
 								<h4>문의작성</h4>
 								
 								<div class="table-wrapper">
-									<form action="MessageServiceCon" method="post">
+									<form action="MessageServiceCon.do" method="post">
 										
 										<div>
-										
-											<label>Title</label>
-											<input type="text" id
-											="Qtitle" name="Qtitle">
+											<label>name</label>
+											<input type="text" id="sedname" placeholder="보내는사람 이름" name="sedname">
 										</div>
+										
 										<div>
-											<select name="category">
-												<option>제품관련</option>											
-												<option>설정관련</option>											
-												<option>기타</option>											
-											</select>
+											<label >Email</label>
+											<input type="text" id="myEmail" pl name="myEmail">
 										</div>
 										<div>
 											<label >Message</label>
-											<textarea rows="4" id="Message" placeholder="문의내용" name="Message"></textarea>
+											<textarea rows="4" id="Message" name="Message"></textarea>
 										</div>
 										<div></div>
 										<div>

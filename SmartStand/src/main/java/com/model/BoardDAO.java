@@ -51,16 +51,16 @@ public class BoardDAO {
 		}
 	}
 
-	public int insertMessage(BoardDTO dto) {
+	public int insertMessage(BoardDTO dto,String id) {
 		conn();
-		String sql = "insert into web_board values(num_message.nextval, ?, ?, ?, ?, sysdate)";
+		String sql = "insert into web_board values(web_board_num_seq.nextval, ?, ?, ?, ?, sysdate)";
 
 		try {
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, dto.getSendName());
-			psmt.setString(2, dto.getCategory());
-			psmt.setString(3, dto.getMyEmail());
+			psmt.setString(1, dto.getQtitle());
+			psmt.setString(2, id);
+			psmt.setString(3, dto.getCategory());
 			psmt.setString(4, dto.getMessage());
 			
 			cnt = psmt.executeUpdate();
