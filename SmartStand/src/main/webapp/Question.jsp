@@ -92,16 +92,16 @@
 										<thead>
 											<tr>
 												<th>번호</th>
-												<th>메세지</th>
 												<th>이름</th>
+												<th>메세지</th>
 												<th>시간</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
 												<td>번호</td>
-												<td>메세지</td>
 												<td>이름</td>
+												<td>메세지</td>
 												<td>작성일자</td>
 											</tr>
 											
@@ -112,20 +112,20 @@
 								<h4>문의작성</h4>
 								
 								<div class="table-wrapper">
-									<form>
+									<form action="MessageServiceCon.do" method="post">
 										
 										<div>
 											<label>name</label>
-											<input type="text">
+											<input type="text" id="sedname" placeholder="보내는사람 이름" name="sedname">
 										</div>
 										
 										<div>
-											<label>Email</label>
-											<input type="text">
+											<label >Email</label>
+											<input type="text" id="myEmail" pl name="myEmail">
 										</div>
 										<div>
-											<label>Message</label>
-											<textarea rows="6"></textarea>
+											<label >Message</label>
+											<textarea rows="4" id="Message" name="Message"></textarea>
 										</div>
 										<div></div>
 										<div>

@@ -25,6 +25,13 @@ public class BoardDTO {
 		this.message = message;
 		this.category = category;
 	}
+	
+	public BoardDTO(String sendName,String message, String myEmail) {
+		super();
+		this.sendName = sendName;
+		this.myEmail = myEmail;
+		this.message = message;
+	}
 
 	public int getNum() {
 		return num;
