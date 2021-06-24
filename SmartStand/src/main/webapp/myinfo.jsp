@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -11,6 +12,13 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
+
+	<%
+		//로그인을 했을 때 저장한 session 값 불러오기
+			MemberDTO info = (MemberDTO)session.getAttribute("login_info");
+		
+		%>
+
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -22,13 +30,23 @@
 							<li>
 								<a href="#">MyPage</a>
 								<ul>
+								<%if(info==null){%>
 									<li><a href="myinfo.jsp">내 정보</a></li>
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
 							<li><a href="Question.jsp">Q&A</a></li>
-							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Logout</a></li>
+							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Login</a></li>
+							<%}else{%>
+							<li><a href="myinfo.jsp">내 정보</a></li>
+									<li><a href="myset.jsp">개인 설정</a></li>
+								</ul>
+							</li>
+							<li><a href="weather.html">Weather</a></li>
+							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="LogoutServireCon.do" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Logout</a></li>
+							<%}%>		
 						</ul>
 					</nav>
 				</header>
@@ -46,25 +64,49 @@
  -->								<div class="table-wrapper" align="center">
 									<table >
 										<tbody >
+										
+										<%if(info==null){%>
+										
 											<tr>
 												<td>이름</td>
-												<td>정태양</td>
+												<td>-</td>
 												
 											</tr>
 											<tr>
 												<td>전화번호</td>
-												<td>010-5027-7001</td>
+												<td>-</td>
 											
 											</tr>
 											<tr>
 												<td>Email</td>
-												<td>jty0127@gmail.com</td>
+												<td>-</td>
 											
 											</tr>
 											<tr>
 												<td>주소</td>
-												<td>쌍촌동</td>
+												<td>-</td>
 											</tr>
+											<%}else{%>
+											<tr>
+												<td>이름</td>
+												<td><%=info.getName() %></td>
+												
+											</tr>
+											<tr>
+												<td>전화번호</td>
+												<td><%=info.getTel()%></td>
+											
+											</tr>
+											<tr>
+												<td>Email</td>
+												<td><%=info.getEmail() %></td>
+											
+											</tr>
+											<tr>
+												<td>주소</td>
+												<td><%=info.getAddr() %></td>
+											</tr>
+												<%}%>	
 										</tbody>
 										
 										<tfoot>
