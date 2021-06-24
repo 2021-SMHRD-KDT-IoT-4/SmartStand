@@ -18,7 +18,6 @@
         /* .login_btn {
             color: #fff !important;
             font-size: 30px !important;
-            
         } */
 
         #title {

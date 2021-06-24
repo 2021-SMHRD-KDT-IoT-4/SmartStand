@@ -30,13 +30,23 @@
 							<li>
 								<a href="#">MyPage</a>
 								<ul>
+								<%if(info==null){%>
 									<li><a href="myinfo.jsp">내 정보</a></li>
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
 							<li><a href="Question.jsp">Q&A</a></li>
-							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Logout</a></li>
+							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Login</a></li>
+							<%}else{%>
+							<li><a href="myinfo.jsp">내 정보</a></li>
+									<li><a href="myset.jsp">개인 설정</a></li>
+								</ul>
+							</li>
+							<li><a href="weather.html">Weather</a></li>
+							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="LogoutServireCon.do" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Logout</a></li>
+							<%}%>		
 						</ul>
 					</nav>
 				</header>
@@ -54,6 +64,29 @@
  -->								<div class="table-wrapper" align="center">
 									<table >
 										<tbody >
+										
+										<%if(info==null){%>
+										
+											<tr>
+												<td>이름</td>
+												<td>-</td>
+												
+											</tr>
+											<tr>
+												<td>전화번호</td>
+												<td>-</td>
+											
+											</tr>
+											<tr>
+												<td>Email</td>
+												<td>-</td>
+											
+											</tr>
+											<tr>
+												<td>주소</td>
+												<td>-</td>
+											</tr>
+											<%}else{%>
 											<tr>
 												<td>이름</td>
 												<td><%=info.getName() %></td>
@@ -73,6 +106,7 @@
 												<td>주소</td>
 												<td><%=info.getAddr() %></td>
 											</tr>
+												<%}%>	
 										</tbody>
 										
 										<tfoot>
