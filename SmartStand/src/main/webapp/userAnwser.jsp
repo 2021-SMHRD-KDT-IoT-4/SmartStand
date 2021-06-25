@@ -139,38 +139,13 @@
 								<td><%= dto.getAnwser() %></td>
 						</td>
 					</tr>
-					<tr>
-						<td colspan="2"><a href="AdminQ&A.jsp"><button>뒤로가기</button></a></td>
-					</tr>
+						
 				</table>
+							
+							<a href="AdminQ&A.jsp"><button>뒤로가기</button></a>
 							
 						</div>
 						<!-- Table -->
-							<section>
-								
-								<h4 style="margin-left: 43%;">write down anwser</h4>
-								
-								<div class="table-wrapper" style="margin-top: 2%">
-									<form action="AnwserServiceCon.do" method="post">
-										
-										
-										<div>
-											<label >Anwser</label>
-											<textarea rows="4" id="anwser" placeholder="답변내용을 적어주세요" name="anwser"></textarea>
-										</div>
-										<div></div>
-										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
-											<il>
-												<input type="submit" value="Send Message">
-											</il>
-											
-										</ul>
-									</div>
-										
-									</form>
-								</div>
-							</section>
 					</div>
 				</div>
 
