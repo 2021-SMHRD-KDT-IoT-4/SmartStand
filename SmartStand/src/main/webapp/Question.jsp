@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html style="background-size: cover; background-image: url(images/rain5.jpg)">
+<html style="background-size: cover; background-image: url(images/rain21.jpg)">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -120,7 +120,7 @@
 										</div>
 										<div></div>
 										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
+										<ul style = "padding-left: 50px; margin-top: 9px;">
 											<il>
 												<input type="submit" value="Send Message">
 											</il>
@@ -136,7 +136,7 @@
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer" style = "background: transparent; background-color: rgb(35 28 29 / 15%);">
+				<footer id="footer" style = "background: transparent; ">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
