@@ -52,7 +52,7 @@
 			<!-- One -->
 
 			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
+				<section id="two" class="spotlight style2 right" style="background-image: url(01d.png)">
 						<div style="margin-top: 20%;" align="center">
 		
 						<p style="font-size: 35px "><strong>LED ON/OFF</strong></p>
