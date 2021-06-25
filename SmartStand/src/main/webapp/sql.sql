@@ -9,6 +9,7 @@ create table web_board(
    category varchar2(500),
    message varchar2(500),
    day date,
+   anwser varchar2(500),
    constraint web_board_num_pk primary key(num)
  );
  
@@ -19,11 +20,12 @@ increment by 1
  
  select * from web_board;
  
+ delete web_board where id='1'
+ 
  drop table web_board;
  
  drop sequence web_board_num_seq;
  select * from web_board_num_seq;
- 
  
  
  //////////////////////////////////////////////

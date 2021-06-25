@@ -8,6 +8,7 @@ public class BoardDTO {
 	private String category;	
 	private String message;
 	private String day;
+	private String anwser;
 	
 	/////////////////////////////////////
 	public BoardDTO(int num, String qtitle, String id, String category, String message, String day) {
@@ -20,15 +21,43 @@ public class BoardDTO {
 		this.day = day;
 	}
 
-	public BoardDTO(String qtitle, String category, String message) {
+	public BoardDTO(int num, String qtitle, String id, String category, String message, String day, String anwser) {
+		super();
+		this.num = num;
+		Qtitle = qtitle;
+		this.id = id;
+		this.category = category;
+		this.message = message;
+		this.day = day;
+		this.anwser = anwser;
+	}
+
+	public BoardDTO(String qtitle, String category, String message, String anwser) {
 		super();
 		Qtitle = qtitle;
 		this.category = category;
 		this.message = message;
+		this.anwser = anwser;
+	}
+	
+	public BoardDTO(String qtitle, String category, String message) {
+		super();
+		this.Qtitle = qtitle;
+		this.category = category;
+		this.message = message;
+		
 	}
 
 	
 	////////////////////////////////
+	
+	public String getAnwser() {
+		return anwser;
+	}
+
+	public void setAnwser(String anwser) {
+		this.anwser = anwser;
+	}
 	
 	public int getNum() {
 		return num;

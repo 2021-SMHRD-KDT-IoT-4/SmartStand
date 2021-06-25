@@ -109,6 +109,7 @@
 												<% for(int i = 0; i<list.size(); i++){ %>
 													<tr>
 														<td><%=i+1 %></td>
+														
 														<td><a href = "AdminAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
 							<%=list.get(i).getQtitle() %></a></td>
 														<td><%=list.get(i).getCategory() %></td>
@@ -121,34 +122,6 @@
 																		
 												</table>
 									</div>
-								<h4>문의작성</h4>
-								
-								<div class="table-wrapper">
-									<form action="MessageServiceCon.do" method="post">
-										
-										<div>
-											<label>name</label>
-											<input type="text" id="sedname" placeholder="보내는사람 이름" name="sedname">
-										</div>
-										
-										<div>
-											<label >Email</label>
-											<input type="text" id="myEmail" pl name="myEmail">
-										</div>
-										<div>
-											<label >Message</label>
-											<textarea rows="4" id="Message" name="Message"></textarea>
-										</div>
-										<div></div>
-										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px;">
-											<il>
-												<input type="submit" value="Send Message">
-											</il>
-											
-										</ul>
-									</div>
-										
 									</form>
 								</div>
 							</section>

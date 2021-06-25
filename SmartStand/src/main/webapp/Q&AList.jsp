@@ -104,6 +104,7 @@
 												<th>제목</th>
 												<th>내용</th>
 												<th>시간</th>
+												<th>답변여부</th>
 											</tr>
 											</thead>
 											
@@ -116,6 +117,12 @@
 														<td><%=list.get(i).getId() %></td>
 														<td><%=list.get(i).getMessage() %></td>
 														<td><%=list.get(i).getDay() %></td>
+														<td>
+														<% if(list.get(i).getAnwser()==null){
+															%>답변중<%
+														}else{
+															%>답변완료<%
+														}%></td>
 													</tr>
 													<%} %>						
 												</tbody>
@@ -123,6 +130,7 @@
 												</table>
 									</div>
 									<a href="Question.jsp" style="text-decoration: none !important;"><input type="button" value="작성하기"></a>
+									<a href="main.jsp" style="text-decoration: none !important;"><input type="button" value="뒤로가기"></a>
 							</section>
 					</div>
 				</div>

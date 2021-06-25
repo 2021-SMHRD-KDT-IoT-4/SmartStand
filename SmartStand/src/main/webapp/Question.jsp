@@ -98,7 +98,7 @@
 								<h4 style="margin-left: 43%;">write down question</h4>
 								
 								<div class="table-wrapper" style="margin-top: 2%">
-									<form action="MessageServiceCon" method="post">
+									<form action="MessageServiceCon.do" method="post">
 										
 										<div>
 										
@@ -124,6 +124,7 @@
 											<il>
 												<input type="submit" value="Send Message">
 											</il>
+											<il><a href ="Q&AList.jsp">뒤로가기</a></il>											
 											
 										</ul>
 									</div>

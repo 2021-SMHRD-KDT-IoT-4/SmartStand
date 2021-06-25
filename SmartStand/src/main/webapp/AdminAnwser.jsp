@@ -73,7 +73,7 @@
 							} else if(info.getId().equals("admin")){%>
 										<li><a href="main.jsp">Main</a></li>							
 										<li><a href="weather.html">Weather</a></li>
-										<li><a href="Question.jsp">Q&A</a></li>							
+										<li><a href="AdminQ&A.jsp">Q&A</a></li>							
 										<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
 							<%}else{%>
 								<li><a href="main.jsp">Main</a></li>
@@ -117,6 +117,10 @@
 					<tr>
 						<td>작성자</td>
 						<td><%= dto.getId() %></td>
+						<%String fnum = dto.getId(); 
+							HttpSession session0 = request.getSession();
+							session0.setAttribute("num", fnum);
+														%>
 					</tr>
 					<tr>
 						<td colspan="2">제목</td>
@@ -133,14 +137,6 @@
 					</tr>
 				</table>
 							
-							
-							
-							
-							
-							
-							
-							
-							
 						</div>
 						<!-- Table -->
 							<section>
@@ -148,12 +144,12 @@
 								<h4 style="margin-left: 43%;">write down anwser</h4>
 								
 								<div class="table-wrapper" style="margin-top: 2%">
-									<form action="MessageServiceCon" method="post">
+									<form action="AnwserServiceCon.do" method="post">
 										
 										
 										<div>
 											<label >Anwser</label>
-											<textarea rows="4" id="Message" placeholder="답변내용을 적어주세요" name="Message"></textarea>
+											<textarea rows="4" id="anwser" placeholder="답변내용을 적어주세요" name="anwser"></textarea>
 										</div>
 										<div></div>
 										<div>

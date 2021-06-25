@@ -198,7 +198,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="Q&AList.jsp">Q&A</a></li>
 							
 							<li><button id = "open" style = "z-index: 1500;" >Login</button></li>
 							<li><button id = "open2" style = "z-index: 1500;" >Join</button></li>
@@ -223,7 +223,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="Q&AList.jsp">Q&A</a></li>
 							
 							<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
 									
