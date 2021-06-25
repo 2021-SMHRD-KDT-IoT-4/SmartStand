@@ -11,7 +11,7 @@ import com.model.BoardDAO;
 import com.model.BoardDTO;
 import com.model.MemberDTO;
 
-public class MessageServiceCon implements Command {
+public class AnwserServiceCon implements Command {
 
 	@Override
 	public void command(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -20,25 +20,27 @@ public class MessageServiceCon implements Command {
 		String Qtitle = request.getParameter("Qtitle");
 		String category = request.getParameter("category");
 		String message = request.getParameter("Message");
+		String anwser = request.getParameter("anwser");
 
-		BoardDTO dto = new BoardDTO(Qtitle, category, message);
+		BoardDTO dto = new BoardDTO(Qtitle, category, message,anwser);
 		BoardDAO dao = new BoardDAO();
 		
 		HttpSession session = request.getSession();
 		MemberDTO info = (MemberDTO)session.getAttribute("login_info");
+		String num = (String) session.getAttribute("num");
 		
 		String id = info.getId();
 		
-		int cnt = dao.AnwserMessage(dto,id);
+		int cnt = dao.update(dto,num);
 		System.out.println(cnt);
 
 		if (cnt > 0) {
-			System.out.println("메시지 전송 성공");
+			System.out.println("답변 성공");
 		} else {
-			System.out.println("메시지 전송 실패");
+			System.out.println("답변 실패");
 		}
 
-		response.sendRedirect("Q&AList.jsp");
+		response.sendRedirect("main.jsp");
 		
 
 	}

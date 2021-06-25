@@ -51,17 +51,19 @@ public class BoardDAO {
 		}
 	}
 
-	public int insertMessage(BoardDTO dto) {
+	public int insertMessage(BoardDTO dto,String id) {
 		conn();
-		String sql = "insert into web_board values(num_message.nextval, ?, ?, ?, ?, sysdate)";
+		String sql = "insert into web_board values(web_board_num_seq.nextval, ?, ?, ?, ?, sysdate,?)";
 
 		try {
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, dto.getSendName());
-			psmt.setString(2, dto.getCategory());
-			psmt.setString(3, dto.getMyEmail());
+			psmt.setString(1, dto.getQtitle());
+			psmt.setString(2, id);
+			psmt.setString(3, dto.getCategory());
 			psmt.setString(4, dto.getMessage());
+			psmt.setString(5, dto.getAnwser());
+			
 			
 			cnt = psmt.executeUpdate();
 
@@ -139,4 +141,153 @@ public class BoardDAO {
 		}
 		return cnt;
 	}
+	
+public ArrayList<BoardDTO> showBoard() {
+		
+		ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
+		conn();
+		
+		String sql = "select * from web_board order by day desc";
+		
+		try {
+			psmt = conn.prepareStatement(sql);
+			
+			rs = psmt.executeQuery();
+
+			while(rs.next()) {
+				int num = rs.getInt(1);
+				String id = rs.getString(3);
+				String Qtilte = rs.getString(2);
+				String category = rs.getString(4);
+				String Message = rs.getString(5);
+				String day = rs.getString(6);
+				String anwser = rs.getString(7);
+				
+				info = new BoardDTO(num, id, Qtilte, category, Message, day,anwser);
+				
+				list.add(info);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return list;
+	}
+
+public BoardDTO showOne(int board_num) {
+	
+	conn();
+	
+	String sql = "select * from web_board where num = ?";
+	
+	try {
+		psmt = conn.prepareStatement(sql);
+		psmt.setInt(1, board_num);
+		
+		rs = psmt.executeQuery();
+		
+		if(rs.next()) {
+			
+			int num = rs.getInt(1);
+			String Qtilte = rs.getString(2);
+			String id = rs.getString(3);
+			String category = rs.getString(4);
+			String message = rs.getString(5);
+			String day = rs.getString(6);
+			String anwser = rs.getString(7);
+			
+			info = new BoardDTO(num, Qtilte, id, category, message, day,anwser);
+		}
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		close();
+	}
+	return info;
+}
+
+
+
+public int update(BoardDTO dto, String id) {
+	conn();
+	
+			String sql = "update web_board set anwser = ? where id = ?";
+			
+			try {
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, dto.getAnwser());
+				psmt.setString(2, id);
+				
+				cnt = psmt.executeUpdate();
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				close();
+			}
+	
+			return cnt;
+}
+
+
+
+  public int AnwserMessage(BoardDTO dto,String id) {
+	  conn(); 
+	  String sql ="insert into web_board values(web_board_num_seq.nextval, ?, ?, ?, ?, sysdate,?)";
+  
+  try { psmt = conn.prepareStatement(sql);
+  
+  psmt.setString(1, dto.getQtitle()); 
+  psmt.setString(2, id); 
+  psmt.setString(3,dto.getCategory()); 
+  psmt.setString(4, dto.getMessage()); 
+  psmt.setString(5,dto.getAnwser());
+  
+  cnt = psmt.executeUpdate();
+  
+  } catch (SQLException e) { e.printStackTrace(); } finally { close();
+  
+  } return cnt;
+  
+  }
+ 
+
+
+public BoardDTO Anwsershow(int board_num) {
+	
+	conn();
+	
+	String sql = "select * from web_board where num = ?";
+	
+	try {
+		psmt = conn.prepareStatement(sql);
+		psmt.setInt(1, board_num);
+		
+		rs = psmt.executeQuery();
+		
+		if(rs.next()) {
+			
+			int num = rs.getInt(1);
+			String Qtilte = rs.getString(2);
+			String id = rs.getString(3);
+			String category = rs.getString(4);
+			String message = rs.getString(5);
+			String day = rs.getString(6);
+			String anwser = rs.getString(7);
+			
+			info = new BoardDTO(num, Qtilte, id, category, message, day,anwser);
+		}
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		close();
+	}
+	return info;
+}
+
+	
 }

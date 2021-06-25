@@ -3,36 +3,62 @@ package com.model;
 public class BoardDTO {
 
 	private int num;
-	private String sendName;
-	private String category;
-	private String myEmail;
+	private String Qtitle;
+	private String id;
+	private String category;	
 	private String message;
 	private String day;
-
-	public BoardDTO(int num, String sendName, String category, String myEmail, String message, String day) {
+	private String anwser;
+	
+	/////////////////////////////////////
+	public BoardDTO(int num, String qtitle, String id, String category, String message, String day) {
+		super();
 		this.num = num;
-		this.sendName = sendName;
+		Qtitle = qtitle;
+		this.id = id;
 		this.category = category;
-		this.myEmail = myEmail;
 		this.message = message;
 		this.day = day;
 	}
 
-	public BoardDTO(String sendName, String myEmail, String message, String category) {
+	public BoardDTO(int num, String qtitle, String id, String category, String message, String day, String anwser) {
 		super();
-		this.sendName = sendName;
-		this.myEmail = myEmail;
-		this.message = message;
+		this.num = num;
+		Qtitle = qtitle;
+		this.id = id;
 		this.category = category;
-	}
-	
-	public BoardDTO(String sendName,String message, String myEmail) {
-		super();
-		this.sendName = sendName;
-		this.myEmail = myEmail;
 		this.message = message;
+		this.day = day;
+		this.anwser = anwser;
 	}
 
+	public BoardDTO(String qtitle, String category, String message, String anwser) {
+		super();
+		Qtitle = qtitle;
+		this.category = category;
+		this.message = message;
+		this.anwser = anwser;
+	}
+	
+	public BoardDTO(String qtitle, String category, String message) {
+		super();
+		this.Qtitle = qtitle;
+		this.category = category;
+		this.message = message;
+		
+	}
+
+	
+	////////////////////////////////
+	
+	public String getAnwser() {
+		return anwser;
+	}
+
+	public void setAnwser(String anwser) {
+		this.anwser = anwser;
+	}
+	
 	public int getNum() {
 		return num;
 	}
@@ -41,20 +67,28 @@ public class BoardDTO {
 		this.num = num;
 	}
 
-	public String getSendName() {
-		return sendName;
+	public String getQtitle() {
+		return Qtitle;
 	}
 
-	public void setSendName(String sendName) {
-		this.sendName = sendName;
+	public void setQtitle(String qtitle) {
+		Qtitle = qtitle;
 	}
 
-	public String getMyEmail() {
-		return myEmail;
+	public String getId() {
+		return id;
 	}
 
-	public void setMyEmail(String myEmail) {
-		this.myEmail = myEmail;
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getMessage() {
@@ -72,13 +106,9 @@ public class BoardDTO {
 	public void setDay(String day) {
 		this.day = day;
 	}
+	
+	
 
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
+	
 
 }
