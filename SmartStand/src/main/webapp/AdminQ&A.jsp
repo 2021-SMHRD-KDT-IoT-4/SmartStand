@@ -1,4 +1,7 @@
+<%@page import="com.model.BoardDAO"%>
+<%@page import="com.model.BoardDTO"%>
 <%@page import="com.model.MemberDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -29,6 +32,8 @@
 	<%
 		//로그인을 했을 때 저장한 session 값 불러오기
 			MemberDTO info = (MemberDTO)session.getAttribute("login_info");
+			BoardDAO dao = new BoardDAO();
+			ArrayList<BoardDTO> list = dao.showBoard();
 		%>
 	
 		<div id="page-wrapper">
@@ -93,50 +98,30 @@
 											<tr>
 												<th>번호</th>
 												<th>이름</th>
-												<th>메세지</th>
-												<th>답변여부</th>
+												<th>분류</th>
+												<th>제목</th>
+												<th>내용</th>
+												<th>시간</th>
 											</tr>
 											</thead>
+											
 												<tbody>
+												<% for(int i = 0; i<list.size(); i++){ %>
 													<tr>
-														<td>번호</td>
-														<td>이름</td>
-														<td>메세지</td>
-														<td>작성일자</td>
+														<td><%=i+1 %></td>
+														
+														<td><a href = "AdminAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
+															<%=list.get(i).getQtitle() %></a></td>
+														<td><%=list.get(i).getCategory() %></td>
+														<td><%=list.get(i).getId() %></td>
+														<td><%=list.get(i).getMessage() %></td>
+														<td><%=list.get(i).getDay() %></td>
 													</tr>
-																				
+													<%} %>						
 												</tbody>
-																			
+																		
 												</table>
 									</div>
-								<h4>문의작성</h4>
-								
-								<div class="table-wrapper">
-									<form action="MessageServiceCon.do" method="post">
-										
-										<div>
-											<label>name</label>
-											<input type="text" id="sedname" placeholder="보내는사람 이름" name="sedname">
-										</div>
-										
-										<div>
-											<label >Email</label>
-											<input type="text" id="myEmail" pl name="myEmail">
-										</div>
-										<div>
-											<label >Message</label>
-											<textarea rows="4" id="Message" name="Message"></textarea>
-										</div>
-										<div></div>
-										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px;">
-											<il>
-												<input type="submit" value="Send Message">
-											</il>
-											
-										</ul>
-									</div>
-										
 									</form>
 								</div>
 							</section>

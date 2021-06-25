@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.BoardDTO"%>
+<%@page import="com.model.BoardDAO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -26,6 +29,17 @@
 
 
 <body class="is-preload" style="background: transparent;">
+
+	<%
+		int num = Integer.parseInt(request.getParameter("board_num"));
+		System.out.println(num);
+		
+		BoardDAO dao = new BoardDAO();
+		BoardDTO dto = dao.showOne(num);
+	
+	%>
+
+
 
 	<%
 		//로그인을 했을 때 저장한 session 값 불러오기
@@ -60,7 +74,7 @@
 							} else if(info.getId().equals("admin")){%>
 										<li><a href="main.jsp">Main</a></li>							
 										<li><a href="weather.html">Weather</a></li>
-										<li><a href="Question.jsp">Q&A</a></li>							
+										<li><a href="AdminQ&A.jsp">Q&A</a></li>							
 										<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
 							<%}else{%>
 								<li><a href="main.jsp">Main</a></li>
@@ -87,51 +101,51 @@
 							<section>
 								<header class="major" style = "margin-bottom: 30px;">
 								
-									<h2>Questions</h2>
+									<h2>Anwser</h2>
 									
 								</header>
 							</section>
+							
+							
+							
+							
+							
+							<table id="list">
+					<tr>
+						<td>분류</td>
+						<td><%= dto.getCategory() %></td>
+					</tr>
+					<tr>
+						<td>작성자</td>
+						<td><%= dto.getId() %></td>
+						<%String fnum = dto.getId(); 
+							HttpSession session0 = request.getSession();
+							session0.setAttribute("num", fnum);
+														%>
+					</tr>
+					<tr>
+						<td colspan="2">제목</td>
+						<td><%= dto.getQtitle() %></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<td colspan="2">내용</td>
+								<td><%= dto.getMessage() %></td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<td colspan="2">내용</td>
+								<td><%= dto.getAnwser() %></td>
+						</td>
+					</tr>
+						
+				</table>
+							
+							<a href="AdminQ&A.jsp"><button>뒤로가기</button></a>
+							
 						</div>
 						<!-- Table -->
-							<section>
-								
-								<h4 style="margin-left: 43%;">Write Down Question</h4>
-								
-								<div class="table-wrapper" style="margin-top: 2%">
-									<form action="MessageServiceCon.do" method="post">
-										
-										<div>
-										
-											<label>Title</label>
-											<input type="text" id="Qtitle" placeholder="제목을 적어주세요" name="Qtitle">
-										</div>
-										<div>
-											<label>Category</label>
-											<select name="category">
-												<option>SELECT ▽</option>
-												<option>제품관련</option>											
-												<option>설정관련</option>											
-												<option>기타</option>											
-											</select>
-										</div>
-										<div>
-											<label >Message</label>
-											<textarea rows="4" id="Message" placeholder="문의내용을 적어주세요" name="Message"></textarea>
-										</div>
-										<div></div>
-										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
-											<il>
-												<input type="submit" value="Send Message">
-											</il>
-											<il><a href ="Q&AList.jsp">뒤로가기</a></il>											
-											
-										</ul>
-									</div>
-										
-									</form>
-								</div>
-							</section>
 					</div>
 				</div>
 
