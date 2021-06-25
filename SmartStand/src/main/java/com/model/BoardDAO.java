@@ -172,5 +172,37 @@ public ArrayList<BoardDTO> showBoard() {
 		}
 		return list;
 	}
+
+public BoardDTO showOne(int board_num) {
+	
+	conn();
+	
+	String sql = "select * from web_board where num = ?";
+	
+	try {
+		psmt = conn.prepareStatement(sql);
+		psmt.setInt(1, board_num);
+		
+		rs = psmt.executeQuery();
+		
+		if(rs.next()) {
+			
+			int num = rs.getInt(1);
+			String Qtilte = rs.getString(2);
+			String id = rs.getString(3);
+			String category = rs.getString(4);
+			String message = rs.getString(5);
+			String day = rs.getString(6);
+			
+			info = new BoardDTO(num, Qtilte, id, category, message, day);
+		}
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		close();
+	}
+	return info;
+}
 	
 }

@@ -1,7 +1,6 @@
-<%@page import="com.model.BoardDAO"%>
 <%@page import="com.model.BoardDTO"%>
+<%@page import="com.model.BoardDAO"%>
 <%@page import="com.model.MemberDTO"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -19,8 +18,9 @@
 	
 	form div {
 			width: 40%;
-			float: left;
+			float: none;
 			padding: 1em;
+			margin-left: 30%;
 		}
 	</style>
 
@@ -30,10 +30,19 @@
 <body class="is-preload" style="background: transparent;">
 
 	<%
+		int num = Integer.parseInt(request.getParameter("board_num"));
+		System.out.println(num);
+		
+		BoardDAO dao = new BoardDAO();
+		BoardDTO dto = dao.showOne(num);
+	
+	%>
+
+
+
+	<%
 		//로그인을 했을 때 저장한 session 값 불러오기
 			MemberDTO info = (MemberDTO)session.getAttribute("login_info");
-			BoardDAO dao = new BoardDAO();
-			ArrayList<BoardDTO> list = dao.showBoard();
 		%>
 	
 		<div id="page-wrapper">
@@ -60,6 +69,12 @@
 							<li><a href="Question.jsp">Q&A</a></li>
 							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 0px;">Login</a></li>
 							<li><a href="#" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Join</a></li>
+							<%
+							} else if(info.getId().equals("admin")){%>
+										<li><a href="main.jsp">Main</a></li>							
+										<li><a href="weather.html">Weather</a></li>
+										<li><a href="Question.jsp">Q&A</a></li>							
+										<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
 							<%}else{%>
 								<li><a href="main.jsp">Main</a></li>
 							<li>
@@ -84,64 +99,65 @@
 						<div>
 							<section>
 								<header class="major" style = "margin-bottom: 30px;">
-									<h2>문의사항</h2>
+								
+									<h2>Anwser</h2>
 									
 								</header>
 							</section>
+							
+							
+							
+							
+							
+							<table id="list">
+					<tr>
+						<td>분류</td>
+						<td><%= dto.getCategory() %></td>
+					</tr>
+					<tr>
+						<td>작성자</td>
+						<td><%= dto.getId() %></td>
+					</tr>
+					<tr>
+						<td colspan="2">제목</td>
+						<td><%= dto.getQtitle() %></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<td colspan="2">내용</td>
+								<td><%= dto.getMessage() %></td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><a href="AdminQ&A.jsp"><button>뒤로가기</button></a></td>
+					</tr>
+				</table>
+							
+							
+							
+							
+							
+							
+							
+							
+							
 						</div>
 						<!-- Table -->
 							<section>
-							<h3>문의목록</h3>
-									<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>번호</th>
-												<th>이름</th>
-												<th>분류</th>
-												<th>제목</th>
-												<th>내용</th>
-												<th>시간</th>
-											</tr>
-											</thead>
-											
-												<tbody>
-												<% for(int i = 0; i<list.size(); i++){ %>
-													<tr>
-														<td><%=i+1 %></td>
-														<td><a href = "AdminAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
-							<%=list.get(i).getQtitle() %></a></td>
-														<td><%=list.get(i).getCategory() %></td>
-														<td><%=list.get(i).getId() %></td>
-														<td><%=list.get(i).getMessage() %></td>
-														<td><%=list.get(i).getDay() %></td>
-													</tr>
-													<%} %>						
-												</tbody>
-																		
-												</table>
-									</div>
-								<h4>문의작성</h4>
 								
-								<div class="table-wrapper">
-									<form action="MessageServiceCon.do" method="post">
+								<h4 style="margin-left: 43%;">write down anwser</h4>
+								
+								<div class="table-wrapper" style="margin-top: 2%">
+									<form action="MessageServiceCon" method="post">
+										
 										
 										<div>
-											<label>name</label>
-											<input type="text" id="sedname" placeholder="보내는사람 이름" name="sedname">
-										</div>
-										
-										<div>
-											<label >Email</label>
-											<input type="text" id="myEmail" pl name="myEmail">
-										</div>
-										<div>
-											<label >Message</label>
-											<textarea rows="4" id="Message" name="Message"></textarea>
+											<label >Anwser</label>
+											<textarea rows="4" id="Message" placeholder="답변내용을 적어주세요" name="Message"></textarea>
 										</div>
 										<div></div>
 										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px;">
+										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
 											<il>
 												<input type="submit" value="Send Message">
 											</il>
@@ -156,7 +172,7 @@
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer" style = "background: transparent;">
+				<footer id="footer" style = "background: transparent; background-color: rgb(35 28 29 / 15%);">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
