@@ -12,6 +12,13 @@
 		<!-- //////////////////////////////// -->
 		
 			<style>
+		body{
+		
+			background-image: url("images/pic09.jpg");
+			
+		}	
+			
+			
 		#table{
 			text-align: center;
 		}

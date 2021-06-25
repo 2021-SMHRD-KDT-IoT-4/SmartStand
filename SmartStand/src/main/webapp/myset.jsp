@@ -19,9 +19,19 @@
 			background-repeat: no-repeat;
     		background-position: center;
 		
-		}
+			}
+		
+			
+			body{
+				
+				background-image: url("images/pic09.jpg");
+		
+			
+			}
 		
 		</style>
+		
+		
 	
 </head>
 <body class="is-preload landing">
@@ -41,7 +51,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="Q&AList.jsp">Q&A</a></li>
 							<li><a href="login.html" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 						</ul>
 					</nav>

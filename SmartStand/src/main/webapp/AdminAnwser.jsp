@@ -22,6 +22,11 @@
 			padding: 1em;
 			margin-left: 30%;
 		}
+		
+	#back{
+		
+		text-decoration: none;
+	}
 	</style>
 
 </head>
@@ -99,19 +104,12 @@
 						<div>
 							<section>
 								<header class="major" style = "margin-bottom: 30px;">
-								
 									<h2>Anwser</h2>
-									
 								</header>
 							</section>
-							
-							
-							
-							
-							
-							<table id="list">
+							<table id="list" style="width: 55%; margin-left: 22%">
 					<tr>
-						<td>분류</td>
+						<td style="width:10em">분류</td>
 						<td><%= dto.getCategory() %></td>
 					</tr>
 					<tr>
@@ -123,17 +121,12 @@
 														%>
 					</tr>
 					<tr>
-						<td colspan="2">제목</td>
+						<td>제목</td>
 						<td><%= dto.getQtitle() %></td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<td colspan="2">내용</td>
-								<td><%= dto.getMessage() %></td>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2"><a href="AdminQ&A.jsp"><button>뒤로가기</button></a></td>
+						<td>내용</td>
+						<td><%= dto.getMessage() %></td>
 					</tr>
 				</table>
 							
@@ -153,11 +146,13 @@
 										</div>
 										<div></div>
 										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
+										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 5%; text-decoration: none;">
 											<il>
 												<input type="submit" value="Send Message">
 											</il>
-											
+											<il>
+												<a id="back" href="AdminQ&A.jsp"><input type="button" value="back"></a>
+											</il>	
 										</ul>
 									</div>
 										
