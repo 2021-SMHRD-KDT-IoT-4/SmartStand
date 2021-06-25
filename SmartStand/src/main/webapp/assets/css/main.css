@@ -2189,12 +2189,12 @@ input, select, textarea {
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: rgb(255 255 255 / 26%);
 			content: '';
 			display: inline-block;
 			height: 0.2em;
-			max-width: 20em;
-			width: 75%;
+			max-width: 30em;
+			width: 100%;
 		}
 
 	footer.major {

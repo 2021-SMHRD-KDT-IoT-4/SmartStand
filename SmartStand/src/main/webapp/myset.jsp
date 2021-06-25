@@ -16,7 +16,6 @@
 		#two {
 		
 			background-size: cover; 
-			background-image: url('images/03d.png');
 			background-repeat: no-repeat;
     		background-position: center;
 		

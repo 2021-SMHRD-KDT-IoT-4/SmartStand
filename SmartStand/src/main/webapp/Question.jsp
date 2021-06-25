@@ -16,8 +16,9 @@
 	
 	form div {
 			width: 40%;
-			float: left;
+			float: none;
 			padding: 1em;
+			margin-left: 30%;
 		}
 	</style>
 
@@ -80,13 +81,13 @@
 				</header>
 
 			<!-- Main -->
-				<div id="main" class="wrapper style1" style="
-    padding-top: 50px;">
+				<div id="main" class="wrapper style1" style="padding-top: 50px;">
 					<div class="container">
 						<div>
 							<section>
 								<header class="major" style = "margin-bottom: 30px;">
-									<h2>문의사항</h2>
+								
+									<h2>Questions</h2>
 									
 								</header>
 							</section>
@@ -94,19 +95,20 @@
 						<!-- Table -->
 							<section>
 								
-								<h4>문의작성</h4>
+								<h4 style="margin-left: 43%;">write down question</h4>
 								
-								<div class="table-wrapper">
+								<div class="table-wrapper" style="margin-top: 2%">
 									<form action="MessageServiceCon" method="post">
 										
 										<div>
 										
 											<label>Title</label>
-											<input type="text" id
-											="Qtitle" name="Qtitle">
+											<input type="text" id="Qtitle" placeholder="제목을 적어주세요" name="Qtitle">
 										</div>
 										<div>
+											<label>category</label>
 											<select name="category">
+												<option>SELECT ▽</option>
 												<option>제품관련</option>											
 												<option>설정관련</option>											
 												<option>기타</option>											
@@ -114,11 +116,11 @@
 										</div>
 										<div>
 											<label >Message</label>
-											<textarea rows="4" id="Message" placeholder="문의내용" name="Message"></textarea>
+											<textarea rows="4" id="Message" placeholder="문의내용을 적어주세요" name="Message"></textarea>
 										</div>
 										<div></div>
 										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px;">
+										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
 											<il>
 												<input type="submit" value="Send Message">
 											</il>
@@ -133,7 +135,7 @@
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer" style = "background: transparent;">
+				<footer id="footer" style = "background: transparent; background-color: rgb(35 28 29 / 15%);">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
