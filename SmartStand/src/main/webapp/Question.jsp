@@ -95,7 +95,7 @@
 						<!-- Table -->
 							<section>
 								
-								<h4 style="margin-left: 43%;">write down question</h4>
+								<h4 style="margin-left: 43%;">Write Down Question</h4>
 								
 								<div class="table-wrapper" style="margin-top: 2%">
 									<form action="MessageServiceCon.do" method="post">
@@ -106,7 +106,7 @@
 											<input type="text" id="Qtitle" placeholder="力格阑 利绢林技夸" name="Qtitle">
 										</div>
 										<div>
-											<label>category</label>
+											<label>Category</label>
 											<select name="category">
 												<option>SELECT ′</option>
 												<option>力前包访</option>											

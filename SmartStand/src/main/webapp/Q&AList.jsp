@@ -25,6 +25,12 @@
 	
 	</style>
 	
+	<style type="text/css"> 
+		a {
+		 text-decoration:none !important;
+		 } 
+		</style> 
+	
 	
 </head>
 
@@ -81,12 +87,12 @@
 				</header>
 
 			<!-- Main -->
-				<div id="main" class="wrapper style1" style="padding-top: 50px;">
+				<div id="main" class="wrapper style1" style="padding-top: 50px; margin-bottom: 120px;">
 					<div class="container">
 						<div>
 							<section>
 								<header class="major" style = "margin-bottom: 30px;">
-									<h2>Q&A</h2>
+									<h2>My Questions</h2>
 									
 								</header>
 							</section>
@@ -132,14 +138,14 @@
 																		
 												</table>
 									</div>
-									<a href="Question.jsp" style="text-decoration: none !important;"><input type="button" value="작성하기"></a>
+									<a href="Question.jsp" style="text-decoration: none !important; margin-left : 1000px;"><input type="button" value="작성하기"></a>
 									<a href="main.jsp" style="text-decoration: none !important;"><input type="button" value="뒤로가기"></a>
 							</section>
 					</div>
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer" style = "background: transparent;">
+				<footer id="footer" style = "background: transparent; margin-top : 0px; padding-top : 60px;">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
