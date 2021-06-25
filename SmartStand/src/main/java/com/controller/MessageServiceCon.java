@@ -38,7 +38,7 @@ public class MessageServiceCon implements Command {
 			System.out.println("메시지 전송 실패");
 		}
 
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("Q&AList.jsp");
 		
 
 	}

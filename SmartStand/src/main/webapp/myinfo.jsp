@@ -59,16 +59,20 @@
 
 			<!-- Main -->
 				<div id="main" class="wrapper style1">
-					<div class="container">
+					<div class="container" style = "box-shadow: 0 0 20em 0 rgb(0 0 0);
+    background-color: rgba(255,255,255,0);
+    width: 800px;color: wheat;">
 						<header class="major">
-							<h2>프로필</h2>
+							<h2 style="margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 40px;">프로필</h2>
 						</header>
 
 						<!-- Table -->
 							<section>
 <!-- 								<h3 align="center">내 정보</h3>
  -->								<div class="table-wrapper" align="center">
-									<table style="width: 30% !important; text-align: center;";>
+									<table style="width: 600px !important; text-align: center;";>
 										<tbody >
 										
 										<%if(info==null){%>

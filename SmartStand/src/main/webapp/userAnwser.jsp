@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html style="background-size: cover; background-image: url(images/rain4.jpg)">
+<html style="background-size: cover; background-image: url(images/rain5.jpg)">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -99,7 +99,7 @@
 					<div class="container">
 						<div>
 							<section>
-								<header class="major" style = "margin-bottom: 30px;">
+								<header class="major" style = "margin-bottom: 100px;">
 								
 									<h2>Anwser</h2>
 									
@@ -110,7 +110,10 @@
 							
 							
 							
-							<table id="list">
+							<table id="list" style="
+    width: 600px !important;
+    text-align: center;
+    margin-left: 400px;">
 					<tr>
 						<td>분류</td>
 						<td><%= dto.getCategory() %></td>
@@ -124,25 +127,32 @@
 														%>
 					</tr>
 					<tr>
-						<td colspan="2">제목</td>
+						<td >제목</td>
 						<td><%= dto.getQtitle() %></td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<td colspan="2">내용</td>
+							<td >내용</td>
 								<td><%= dto.getMessage() %></td>
-						</td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<td colspan="2">내용</td>
+							<td>답변</td>
 								<td><%= dto.getAnwser() %></td>
-						</td>
 					</tr>
 						
 				</table>
 							
-							<a href="AdminQ&A.jsp"><button>뒤로가기</button></a>
+							<a href="Q&AList.jsp"><button style="
+    background-color: transparent;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 30%);
+    padding: 10px;
+    margin-left: 800px;
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+    font-size: inherit;">Back</button></a>
 							
 						</div>
 						<!-- Table -->
