@@ -25,6 +25,8 @@ increment by 1
  drop table web_board;
  
  drop sequence web_board_num_seq;
+ 
+ 
  select * from web_board_num_seq;
  
  

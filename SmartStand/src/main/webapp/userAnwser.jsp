@@ -1,7 +1,7 @@
-<%@page import="com.model.BoardDAO"%>
-<%@page import="com.model.BoardDTO"%>
-<%@page import="com.model.MemberDTO"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="com.model.BoardDTO"%>
+<%@page import="com.model.BoardDAO"%>
+<%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -19,23 +19,31 @@
 	
 	form div {
 			width: 40%;
-			float: left;
+			float: none;
 			padding: 1em;
+			margin-left: 30%;
 		}
-	
 	</style>
-	
-	
+
 </head>
 
 
 <body class="is-preload" style="background: transparent;">
 
 	<%
+		int num = Integer.parseInt(request.getParameter("board_num"));
+		System.out.println(num);
+		
+		BoardDAO dao = new BoardDAO();
+		BoardDTO dto = dao.showOne(num);
+	
+	%>
+
+
+
+	<%
 		//로그인을 했을 때 저장한 session 값 불러오기
 			MemberDTO info = (MemberDTO)session.getAttribute("login_info");
-			BoardDAO dao = new BoardDAO();
-			ArrayList<BoardDTO> list = dao.showBoard();
 		%>
 	
 		<div id="page-wrapper">
@@ -62,6 +70,12 @@
 							<li><a href="Question.jsp">Q&A</a></li>
 							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 0px;">Login</a></li>
 							<li><a href="#" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Join</a></li>
+							<%
+							} else if(info.getId().equals("admin")){%>
+										<li><a href="main.jsp">Main</a></li>							
+										<li><a href="weather.html">Weather</a></li>
+										<li><a href="AdminQ&A.jsp">Q&A</a></li>							
+										<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
 							<%}else{%>
 								<li><a href="main.jsp">Main</a></li>
 							<li>
@@ -86,60 +100,82 @@
 						<div>
 							<section>
 								<header class="major" style = "margin-bottom: 30px;">
-									<h2>Q&A</h2>
+								
+									<h2>Anwser</h2>
 									
 								</header>
 							</section>
+							
+							
+							
+							
+							
+							<table id="list">
+					<tr>
+						<td>분류</td>
+						<td><%= dto.getCategory() %></td>
+					</tr>
+					<tr>
+						<td>작성자</td>
+						<td><%= dto.getId() %></td>
+						<%String fnum = dto.getId(); 
+							HttpSession session0 = request.getSession();
+							session0.setAttribute("num", fnum);
+														%>
+					</tr>
+					<tr>
+						<td colspan="2">제목</td>
+						<td><%= dto.getQtitle() %></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<td colspan="2">내용</td>
+								<td><%= dto.getMessage() %></td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<td colspan="2">내용</td>
+								<td><%= dto.getAnwser() %></td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><a href="AdminQ&A.jsp"><button>뒤로가기</button></a></td>
+					</tr>
+				</table>
+							
 						</div>
 						<!-- Table -->
 							<section>
-							<h3>List</h3>
-									<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>번호</th>
-												<th>분류</th>
-												<th>제목</th>
-												<th>내용</th>
-												<th>시간</th>
-												<th>답변여부</th>
-											</tr>
-											</thead>
+								
+								<h4 style="margin-left: 43%;">write down anwser</h4>
+								
+								<div class="table-wrapper" style="margin-top: 2%">
+									<form action="AnwserServiceCon.do" method="post">
+										
+										
+										<div>
+											<label >Anwser</label>
+											<textarea rows="4" id="anwser" placeholder="답변내용을 적어주세요" name="anwser"></textarea>
+										</div>
+										<div></div>
+										<div>
+										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
+											<il>
+												<input type="submit" value="Send Message">
+											</il>
 											
-											
-											
-											
-											
-												<tbody>
-												<% for(int i = 0; i<list.size(); i++){ %>
-													<tr>
-														<td><%=i+1 %></td>
-														<td><%=list.get(i).getCategory() %></td>
-														<td><a href = "userAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
-							<%=list.get(i).getId() %></a></td>
-														<td><%=list.get(i).getMessage() %></td>
-														<td><%=list.get(i).getDay() %></td>
-														<td>
-														<% if(list.get(i).getAnwser()==null){
-															%>답변중<%
-														}else{
-															%>답변완료<%
-														}%></td>
-													</tr>
-													<%} %>						
-												</tbody>
-																		
-												</table>
+										</ul>
 									</div>
-									<a href="Question.jsp" style="text-decoration: none !important;"><input type="button" value="작성하기"></a>
-									<a href="main.jsp" style="text-decoration: none !important;"><input type="button" value="뒤로가기"></a>
+										
+									</form>
+								</div>
 							</section>
 					</div>
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer" style = "background: transparent;">
+				<footer id="footer" style = "background: transparent; background-color: rgb(35 28 29 / 15%);">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>

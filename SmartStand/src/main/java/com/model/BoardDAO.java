@@ -196,8 +196,9 @@ public BoardDTO showOne(int board_num) {
 			String category = rs.getString(4);
 			String message = rs.getString(5);
 			String day = rs.getString(6);
+			String anwser = rs.getString(7);
 			
-			info = new BoardDTO(num, Qtilte, id, category, message, day);
+			info = new BoardDTO(num, Qtilte, id, category, message, day,anwser);
 		}
 		
 	} catch (SQLException e) {
