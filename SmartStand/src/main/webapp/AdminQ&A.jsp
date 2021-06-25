@@ -111,7 +111,7 @@
 														<td><%=i+1 %></td>
 														
 														<td><a href = "AdminAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
-							<%=list.get(i).getQtitle() %></a></td>
+															<%=list.get(i).getQtitle() %></a></td>
 														<td><%=list.get(i).getCategory() %></td>
 														<td><%=list.get(i).getId() %></td>
 														<td><%=list.get(i).getMessage() %></td>
