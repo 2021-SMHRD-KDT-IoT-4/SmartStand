@@ -22,12 +22,7 @@
 			}
 		
 			
-			body{
-				
-				background-image: url("images/pic09.jpg");
-		
 			
-			}
 		
 		</style>
 		
@@ -72,7 +67,7 @@
 				</section>
 
 			<!-- One -->
-
+<!-- hi  -->
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right" >
 						<div style="margin-top: 20%;" align="center">
