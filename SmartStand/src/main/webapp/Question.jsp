@@ -52,14 +52,14 @@
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
-							<li><a href="weather.html">Weather</a></li>
+							<li><a href="weather.jsp">Weather</a></li>
 							<li><a href="Question.jsp">Q&A</a></li>
 							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 0px;">Login</a></li>
 							<li><a href="#" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Join</a></li>
 							<%
 							} else if(info.getId().equals("admin")){%>
 										<li><a href="main.jsp">Main</a></li>							
-										<li><a href="weather.html">Weather</a></li>
+										<li><a href="weather.jsp">Weather</a></li>
 										<li><a href="Question.jsp">Q&A</a></li>							
 										<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
 							<%}else{%>
