@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/slider.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<<<<<<< HEAD
 		
 		<style>
 		
@@ -27,6 +28,8 @@
 		</style>
 		
 		
+=======
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
 	
 </head>
 <body class="is-preload landing">
@@ -46,7 +49,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Q&AList.jsp">Q&A</a></li>
+							<li><a href="Question.jsp">Q&A</a></li>
 							<li><a href="login.html" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 						</ul>
 					</nav>
