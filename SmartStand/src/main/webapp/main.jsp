@@ -12,8 +12,16 @@
 		<!-- //////////////////////////////// -->
 		
 			<style>
+		body{
+		
+			background-image: url("images/pic09.jpg");
+			
+		}	
+			
+			
 		#table{
-			text-align: center;
+	
+		text-align: center;
 		}
         /* .login_btn {
             color: #fff !important;

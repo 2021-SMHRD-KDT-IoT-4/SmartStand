@@ -111,7 +111,7 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 		color: #ffffffbf;
 		text-decoration: none;
 	}
@@ -2193,7 +2193,7 @@ input, select, textarea {
 			content: '';
 			display: inline-block;
 			height: 0.2em;
-			max-width: 30em;
+			max-width: 18em;
 			width: 100%;
 		}
 

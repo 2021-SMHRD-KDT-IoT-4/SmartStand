@@ -10,8 +10,51 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/slider.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
 		
 		<style>
+		
+		#one:before {
+			content: '';
+			display: inline-block;
+			height: 100vh;
+			vertical-align: middle;
+			width: 1%;
+		}
+		
+		#one .content {
+			display: inline-block;
+			margin-right: 1%;
+			max-width: 95%;
+			padding: 6em;
+			position: relative;
+			text-align: right;
+			vertical-align: middle;
+			z-index: 1;
+		}
+		
+		#one{
+		background-color: #272833;
+		background-image: url("images/pic17.jpg");
+		background-position: center center;
+		background-size: cover;
+		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+		min-height: 100vh;
+		position: relative;
+		text-align: center;
+		z-index: 21;
+				}
+		
+		
+		body,#two,#three{
+			/* background-color: #1c1d26; */
+				background-image: url(images/pic17.jpg);
+				background-size: cover;
+				/* background-repeat: no-repeat; */
+				/*background-position: bottom; */
+				background-attachment: scroll;
+		
+		
 		
 		#two {
 		
@@ -19,10 +62,13 @@
 			background-repeat: no-repeat;
     		background-position: center;
 		
-		}
+			}
+		
+			
+			
 		
 		</style>
-	
+
 </head>
 <body class="is-preload landing">
 		<div id="page-wrapper">
@@ -41,7 +87,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="Q&AList.jsp">Q&A</a></li>
 							<li><a href="login.html" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 						</ul>
 					</nav>
@@ -49,7 +95,7 @@
 
 			<!-- Banner -->
 			 
-				<section id="banner">
+				<section id="one">
 					<div class="content">
 						<header>
 							<h2>Setting</h2>
@@ -64,14 +110,14 @@
 			<!-- One -->
 
 			<!-- Two -->
-				<section id="two" class="spotlight style2 right" >
-						<div style="margin-top: 20%;" align="center">
+				<section id="two" class="spotlight right" >
+						<div style=" margin-left:32%; margin-top: 10%; width: 35%; height: 45%; box-shadow: 3px 3px 24px 3px;" align="center">
 		
-						<p style="font-size: 35px "><strong>LED ON/OFF</strong></p>
+						<p style="font-size: 35px; line-height: 3em "><strong>LED ON/OFF</strong></p>
 						
 						<br>
 						<div>
-						<select name="onoff" id="onoff" style="width: 30%;" >
+						<select name="onoff" id="onoff" style="width: 30%; font-weight: bold;" >
 							<option style="text-ailgn=center;">::: 전원선택 :::</option>
 							<option value="1">OFF</option>
 							<option value="0">ON</option>
@@ -80,7 +126,7 @@
 					<br>
 					<br>
 					<div>
-						<input type="button" id="btn" value="ON/OFF 해주세요.">
+						<input type="button" id="btn" value="ON/OFF 해주세요." style="font-weight: bold;">
 					</div>
 				</div>
 				<br>
@@ -94,12 +140,12 @@
 				</section>
 
 			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
+				<section id="three" class="spotlight left">
 
 					
-						<div style = "width: 30%; margin-left: 35%; margin-top: 10%;">
-						<h1 style="font-size: 25px; text-align: center;">알림선택</h1>
-						<div style="margin-left: 10%;">
+						<div style = "width: 30%; height:50%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
+						<h1 style="font-size: 25px; text-align: center; line-height: 2em ">알림선택</h1>
+						<div style="margin-left: 13%;">
 							<input type="submit" value="voice">
 							<input type="submit" value="song">
 							<input type="submit" value="Asmr">
@@ -130,7 +176,7 @@
 						
 						<input style="margin-left: 40%;" type="submit" value="확인">
 					</div>
-					<a href="#banner" class="goto-next scrolly">Next</a>
+					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
 		</div>
 

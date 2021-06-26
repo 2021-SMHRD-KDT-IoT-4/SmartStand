@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html style="background-size: cover; background-image: url(images/rain4.jpg)">
+<html style="background-size: cover; background-image: url(images/rain21.jpg)">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -72,7 +72,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="Q&AList.jsp">Q&A</a></li>
 							<li><a href="LogoutServireCon.do" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 								<%}%>	
 							
@@ -120,11 +120,11 @@
 										</div>
 										<div></div>
 										<div>
-										<ul style = "padding-left: 50px; margin-top: 9px; margin-left: 20%">
+										<ul style = "padding-left: 50px; margin-top: 9px;">
 											<il>
 												<input type="submit" value="Send Message">
 											</il>
-											<il><a href ="Q&AList.jsp">뒤로가기</a></il>											
+											<il><form action = "Q&AList.jsp"><input type="submit" value="Back"></form></il>											
 											
 										</ul>
 									</div>
@@ -136,7 +136,7 @@
 				</div>
 
 			<!-- Footer -->
-				<footer id="footer" style = "background: transparent; background-color: rgb(35 28 29 / 15%);">
+				<footer id="footer" style = "background: transparent; ">
 					<ul class="icons">
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>

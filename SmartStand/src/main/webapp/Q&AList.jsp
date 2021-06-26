@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html style="background-size: cover; background-image: url(images/rain4.jpg)">
+<html style="background-size: cover; background-image: url(images/rain21.jpg)">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -23,13 +23,11 @@
 			padding: 1em;
 		}
 	
-	</style>
+	a {
+			text-decoration:none !important;
+	  } 
 	
-	<style type="text/css"> 
-		a {
-		 text-decoration:none !important;
-		 } 
-		</style> 
+	</style>
 	
 	
 </head>
@@ -107,7 +105,6 @@
 												<th>번호</th>
 												<th>분류</th>
 												<th>제목</th>
-												<th>내용</th>
 												<th>시간</th>
 												<th>답변여부</th>
 											</tr>
@@ -124,7 +121,6 @@
 														<td><%=list.get(i).getCategory() %></td>
 														<td><a href = "userAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
 							<%=list.get(i).getId() %></a></td>
-														<td><%=list.get(i).getMessage() %></td>
 														<td><%=list.get(i).getDay() %></td>
 														<td>
 														<% if(list.get(i).getAnwser()==null){
@@ -138,8 +134,8 @@
 																		
 												</table>
 									</div>
-									<a href="Question.jsp" style="text-decoration: none !important; margin-left : 1000px;"><input type="button" value="작성하기"></a>
-									<a href="main.jsp" style="text-decoration: none !important;"><input type="button" value="뒤로가기"></a>
+									<a href="Question.jsp" style="text-decoration: none !important; margin-left : 1000px;"><input type="button" value="Submit"></a>
+									<a href="main.jsp" style="text-decoration: none !important;"><input type="button" value="Back"></a>
 							</section>
 					</div>
 				</div>
