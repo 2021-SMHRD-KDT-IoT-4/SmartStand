@@ -36,7 +36,11 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
+<<<<<<< HEAD
+							<li><a href="Q&AList2.jsp">Q&A</a></li>
+=======
 							<li><a href="Q&AList.jsp">Q&A</a></li>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
 							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Login</a></li>
 							<%
 							} else if(info.getId().equals("admin")){%>
@@ -50,7 +54,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="Q&AList.jsp">Q&A</a></li>
 							<li><a href="LogoutServireCon.do" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Logout</a></li>
 							<%}%>		
 						</ul>
