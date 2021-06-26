@@ -86,7 +86,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Question.jsp">Q&A</a></li>
+							<li><a href="Q&AList.jsp">Q&A</a></li>
 							<li><a href="LogoutServireCon.do" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 								<%}%>	
 							

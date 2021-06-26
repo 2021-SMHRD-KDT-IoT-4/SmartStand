@@ -27,6 +27,23 @@
 			text-decoration:none !important;
 	  } 
 	
+	.modal_content {
+            position: absolute;
+            top: 0px;
+            box-shadow: 0 10px 200px rgba(255, 255, 255, 0.19), 0 6px 6px rgba(255, 255, 255, 0.23);
+            padding: 0px 40px;
+            text-align: center;
+            width: 600px;
+            z-index: 1500;
+			margin-top: 10%;
+			margin-left: 650px;
+			
+        }
+         #title {
+            font-size: 60px !important;
+            color: white !important;
+            margin-top: 50px;
+        }
 	</style>
 	
 	
@@ -76,7 +93,7 @@
 								</ul>
 							</li>
 							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Q&AList.jsp">Q&A</a></li>
+							<li><a href="Question.jsp">Q&A</a></li>
 							<li><a href="LogoutServireCon.do" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 								<%}%>	
 							
@@ -84,76 +101,45 @@
 					</nav>
 				</header>
 
-			<!-- Main -->
-				<div id="main" class="wrapper style1" style="padding-top: 50px; margin-bottom: 120px;">
-					<div class="container">
-						<div>
-							<section>
-								<header class="major" style = "margin-bottom: 30px;">
-									<h2>My Questions</h2>
-									
-								</header>
-							</section>
-						</div>
-						<!-- Table -->
-							<section>
-							<h3>List</h3>
-									<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>번호</th>
-												<th>분류</th>
-												<th>제목</th>
-												<th>시간</th>
-												<th>답변여부</th>
-											</tr>
-											</thead>
-											
-											
-											
-											
-											
-												<tbody>
-												<% for(int i = 0; i<list.size(); i++){ %>
-													<tr>
-														<td><%=i+1 %></td>
-														<td><%=list.get(i).getCategory() %></td>
-														<td><a href = "userAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
-							<%=list.get(i).getId() %></a></td>
-														<td><%=list.get(i).getDay() %></td>
-														<td>
-														<% if(list.get(i).getAnwser()==null){
-															%>답변중<%
-														}else{
-															%>답변완료<%
-														}%></td>
-													</tr>
-													<%} %>						
-												</tbody>
-																		
-												</table>
-									</div>
-									<a href="Question.jsp" style="text-decoration: none !important; margin-left : 1000px;"><input type="button" value="Submit"></a>
-									<a href="main.jsp" style="text-decoration: none !important;"><input type="button" value="Back"></a>
-							</section>
-					</div>
-				</div>
 
-			<!-- Footer -->
-				<footer id="footer" style = "background: transparent; margin-top : 0px; padding-top : 60px;">
-					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
+<form action = "LoginServiceCon2.do">
+	<div class="modal hidden" align = "center" >
+		<div class="modal_overlay"></div>
+		<div class="modal_content">
+			<table width="100%" align="center" style="margin-top: 0px; margin-bottom: 0px; border-collapse: unset;" id="table ">
+				<tr height="150px" style="background-color: rgba(255, 255, 255, 0);">
+					<td colspan="2" align="center"><a href="main" class="a" >
+						<h1 id="title">스마트우산꽂이</h1>
+					</a></td>
+			</tr>
+			<tr height="120px"style="background-color: rgba(255, 255, 255, 0);">
+				<td colspan="2" align="center" style = "color: white" >ID<input type="text" name = "id" placeholder="ID를 입력해주세요" class="input" height="70px" >
+				<hr style = "margin-top: 0px; margin-bottom: 0px;">
+				</td>
+			</tr>
+			<tr height="120px"style="background-color: rgba(255, 255, 255, 0);">
+				<td colspan="2" align="center" style = "color: white" >PW<input type="text" name = "pw" placeholder="PW를 입력해주세요" class="input">
+				<hr style = "margin-top: 0px; margin-bottom: 0px;">
+				</td>
+				
+			</tr>
+			<tr height="50px"style="background-color: rgba(255, 255, 255, 0);">
+				<td class="b" align="center" ><a href="" id="d" >ID/PW찾기</a></td>
+
+				<td class="c"><a href="Join.html" id="e" >회원가입</a></td>
+			</tr>
+			<tr height="70px" align="center" style="background-color: rgba(255, 255, 255, 0);">
+				<td colspan="2"><input type="submit" value="Login" class="login_btn" ></td>
+			</tr>
+
+		</table>
+		
+		<button style = "border-color: transparent; background-color: transparent;"></button>
+	</div>
+	</div>
+	</form>
+
+
 
 		</div>
 

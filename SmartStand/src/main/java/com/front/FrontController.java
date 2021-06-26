@@ -12,6 +12,7 @@ import com.controller.AnwserServiceCon;
 import com.controller.Command;
 import com.controller.JoinServiceCon;
 import com.controller.LoginServiceCon;
+import com.controller.LoginServiceCon2;
 import com.controller.LogoutServireCon;
 import com.controller.MessageServiceCon;
 
@@ -55,7 +56,9 @@ public class FrontController extends HttpServlet {
 				inter = new MessageServiceCon();
 			}else if(resultURI.equals("AnwserServiceCon.do")) {
 				inter = new AnwserServiceCon();
-			}
+			}else if(resultURI.equals("LoginServiceCon2.do")) {
+				inter = new LoginServiceCon2();
+			}	
 		
 		
 //		}else if(resultURI.equals("UpdateServiceCon.do")) {

@@ -191,16 +191,10 @@
 						if(info==null){
 						%>
 								<li><a href="main.jsp">Main</a></li>
-							<li>
-								<a href="#">MyPage</a>
-								<ul>
-									<li><a href="myinfo.jsp">내 정보</a></li>
-									<li><a href="myset.jsp">개인 설정</a></li>
-								</ul>
-							</li>
-							<li><a href="weather.html">Weather</a></li>
-							<li><a href="Q&AList.jsp">Q&A</a></li>
 							
+							<li><a href="weather.html">Weather</a></li>
+ 							<li><a href="Q&AList2.jsp">Q&A</a></li>
+						
 							<li><button id = "open" style = "z-index: 1500;" >Login</button></li>
 							<li><button id = "open2" style = "z-index: 1500;" >Join</button></li>
 							<%

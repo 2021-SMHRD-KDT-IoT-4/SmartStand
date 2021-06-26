@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 
 <html style="background-size: cover; background-image: url(images/weather.jpg); background-repeat: no-repeat;
@@ -5,7 +7,7 @@
 
 <head>
 	<title>Right Sidebar - Landed by HTML5 UP</title>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
@@ -48,7 +50,7 @@
 					<p>Happy day, Please cherish your time.</p>
 					<p>Check out today's weather.</p>
 
-					<meta charset="UTF-8">
+					<meta charset="utf-8">
 					<title>Weather App - JavaScript</title>
 					<link rel="stylesheet" href="font/Rimouski.css">
 					<link rel="stylesheet" href="style.css">
