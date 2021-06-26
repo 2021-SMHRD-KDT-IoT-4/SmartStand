@@ -48,7 +48,7 @@
 		
 		body,#two,#three{
 			/* background-color: #1c1d26; */
-				background-image: url(images/pic17.jpg);
+				background-image: url(images/pic25.jpg);
 				background-size: cover;
 				/* background-repeat: no-repeat; */
 				/*background-position: bottom; */

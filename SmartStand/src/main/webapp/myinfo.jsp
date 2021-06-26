@@ -35,9 +35,17 @@
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
+<<<<<<< HEAD
+							<li><a href="weather.html">Weather</a></li>
+=======
 							<li><a href="weather.jsp">Weather</a></li>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
 							<li><a href="Q&AList2.jsp">Q&A</a></li>
+<<<<<<< HEAD
 							<li><a href="Q&AList.jsp">Q&A</a></li>
+=======
+							<li><a href="Q&AList.jsp">Q&A</a></li>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
 							<li><a href="#" class="button primary" style="padding-left: 0px; padding-right: 20px;" >Login</a></li>
 							<%
 							} else if(info.getId().equals("admin")){%>
