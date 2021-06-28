@@ -34,21 +34,21 @@
 		}
 		
 		#one{
-		background-color: #272833;
+		/* background-color: #272833;
 		background-image: url("images/pic17.jpg");
 		background-position: center center;
 		background-size: cover;
-		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
 		min-height: 100vh;
-		position: relative;
+		position: relative; */
 		text-align: center;
 		z-index: 21;
+		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
 				}
 		
 		
 		body,#two,#three{
 			/* background-color: #1c1d26; */
-				background-image: url(images/pic17.jpg);
+				background-image: url(images/pic25.jpg);
 				background-size: cover;
 				/* background-repeat: no-repeat; */
 				/*background-position: bottom; */
@@ -65,7 +65,6 @@
 			}
 		
 			
-			
 		
 		</style>
 
@@ -74,7 +73,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
+				<header id="header" style="position: fixed; box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25); ">
 					<h1 id="logo"><a href="main.jsp">SmartStand</a></h1>
 					<nav id="nav">
 						<ul>
