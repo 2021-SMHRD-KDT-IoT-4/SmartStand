@@ -216,7 +216,7 @@
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
-							<li><a href="weather.html">Weather</a></li>
+							<li><a href="weather.jsp">Weather</a></li>
 							<li><a href="Q&AList.jsp">Q&A</a></li>
 							
 							<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>
@@ -247,8 +247,10 @@
 				<section id="one" class="spotlight style1 bottom">
 					<span class="image fit main"><img src="images/pic09.jpg" alt="" /></span>
 					
-						<div><a href="https://www.flaticon.com/kr/authors/linector" title="Linector">Linector</a></div>
 						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						
+						<img src="images/people.png">
+    					 
 					
 					<div class="content">
 						<div class="container">
