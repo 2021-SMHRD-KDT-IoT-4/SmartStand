@@ -142,7 +142,7 @@
 				<section id="three" class="spotlight left">
 
 					
-						<div style = "width: 30%; height:50%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
+						<div style = "width: 30%; height:60%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
 						<h1 style="font-size: 25px; text-align: center; line-height: 2em ">알림선택</h1>
 						<div style="margin-left: 13%;">
 							<input type="submit" value="voice">

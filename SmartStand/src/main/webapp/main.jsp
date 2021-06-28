@@ -245,17 +245,17 @@
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic09.jpg" alt="" /></span>
+					<span class="image fit main"><img src="images/pic08.jpg" alt="" /> </span>
 					
 						
-						<img src="images/people.png" style="width: 200px; height: 200px;margin-left: 240px;margin-top: 100px;">
-						<img src="images/line.png" style="width: 100px; height: 100px;margin-left: 20px;margin-bottom: 50px;">
-						<img src="images/computer.png" style="width: 200px; height: 200px;margin-left: 50px;margin-top: 100px;">
-						<img src="images/line.png" style="width: 100px; height: 100px;margin-left: 50px;margin-bottom: 50px;">
-						<img src="images/umbrella-stand.png" style="width: 200px; height: 200px;margin-left: 20px;margin-top: 100px;">
-						<img src="images/line.png" style="width: 100px; height: 100px;margin-left: 20px;margin-bottom: 50px;">
-						<img src="images/umbrella-stand3.png" style="width: 70px; height: 100px;margin-left: 50px;margin-top: 100px;">
-						<img src="images/busineess.png" style="width: 170px; height: 200px;margin-left: 20px;margin-top: 100px;">
+						<img src="images/people.png" style="width: 300px; height: 300px;margin-left: 60px;margin-top: 200px;">
+						<img src="images/line.png" style="width: 100px; height: 150px;margin-bottom: 100px;">
+						<img src="images/computer.png" style="width: 300px; height: 300px;margin-left: 50px;margin-top: 100px;">
+						<img src="images/line.png" style="width: 100px; height: 150px;margin-bottom: 100px;margin-left: 80px;">
+						<img src="images/umbrella-stand.png" style="width: 300px; height: 300px;margin-top: 100px;">
+						<img src="images/line.png" style="width: 100px; height: 150px;margin-bottom: 100px;">
+						<img src="images/umbrella-stand3.png" style="width: 100px; height: 150px;margin-left: 50px;margin-top: 100px;">
+						<img src="images/busineess.png" style="width: 200px; height: 300px;margin-left: 20px;margin-top: 100px;">
     					 
 					
 					<div class="content">
@@ -268,18 +268,28 @@
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
+									<p>Smart Stand
+									사용자가 홈페이지에서 원하는 노래와 조명을 선택 할 수 있습니다.
+									 날짜, 시간, 온도등을 화면에 항상 보여주며,
+									 비가 오는 날에만 직접 설정해 놓은 노래와 조명을 보여줍니다.
+									바쁜 출근 시간에 우산을 두고가서 다시 가지러 오는 번거로움을 Smart Stand로 날려버리죠!
+									</p>
+									<!-- <p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
 									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
 									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
 									augue varius tempus lobortis porttitor accumsan consequat
-									adipiscing lorem dolor.</p>
+									adipiscing lorem dolor.</p> -->
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
+									<p>Users can select the song and lighting they want from the homepage.
+The date, time, temperature are always shown on the screen.
+It only shows songs and lights that are set up on rainy days.
+I leave my umbrella in my busy rush hour, and I get rid of the hassle of picking it up again!</p>
+									<!-- <p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
 									adipiscing adipiscing metus massa. Blandit orci porttitor semper.
 									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integerl
 									mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-									ipsum dolor nullam.</p>
+									ipsum dolor nullam.</p> -->
 								</div>
 							</div>
 						</div>
