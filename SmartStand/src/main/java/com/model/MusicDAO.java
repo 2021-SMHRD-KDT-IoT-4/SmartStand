@@ -49,7 +49,7 @@ public class MusicDAO {
 		   list = new ArrayList<MusicDTO>();
 		      conn();
 		      try {
-		    	  String sql = "select * from web_music where genre = ? ";
+		    	  String sql = "select * from web_music1 where genre = ? ";
 		         psmt = conn.prepareStatement(sql);
 		         psmt.setString(1, genre);
 		         rs = psmt.executeQuery();
