@@ -15,89 +15,8 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 		<style>
-	#table{
-	
-		text-align: center;
-		}
-        /* .login_btn {
-            color: #fff !important;
-            font-size: 30px !important;
-        } */
-
-        #title {
-            font-size: 60px !important;
-            color: white !important;
-            margin-top: 50px;
-        }
-
-        .a {
-            text-decoration-line: none;
-        }
-
-        .input {
-            width: 400px;
-            height: 50px;
-            font-size: 20px  !important;
-			border-color: black !important;
-			color: rgba(255,255,255,0.75) !important;
-			padding-top: 25px !important;
-			border: solid 0px !important;
-        }
-
-        .b {
-            vertical-align: top;
-            padding-right: 10px;
-            width: 400px;
-			color: black !important;
-        }
-
-        .c {
-            vertical-align: top;
-            padding-left: 10px;
-            width: 400px;
-            font-size: 30 !important;
-			color: black !important;
-        }
-
-        #d {
-            font-size: 18px !important;
-            text-decoration-line: none !important;
-            color: white !important;
-        }
-
-        #e {
-            font-size: 18px !important;
-            text-decoration-line: none !important;
-            color: white !important;
-        }
-    
-    /* /////////////////////////////////////////////// */
-    
-    .is-preload landing{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-        }
-        #open {
-            all: unset;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-			width: 30px;
-        }
-         #logout {
-            all: unset;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-			width: 80px;
-        }
-        #open2 {
-            all: unset;
-            border-radius: 5px;
-            cursor: pointer;
-			width: 50px;
-        }
-
-        .modal {
+		
+			.modal {
             position: fixed;
             top: 0;
             left: 0;
@@ -167,6 +86,9 @@
 			background-color: rgba(255, 255, 255, 0) !important;
 		        
         }
+	
+		
+       
     
     
 		</style>
