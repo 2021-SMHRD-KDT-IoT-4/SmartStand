@@ -133,7 +133,7 @@
 					<!-- <div id="msg"></div> -->
 					
 				<div id="led"  align="center"></div> 
-
+	
 
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>
@@ -142,32 +142,90 @@
 				<section id="three" class="spotlight left">
 
 					
-						<div style = "width: 30%; height:50%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
+						<div style = "width: 30%; height:61%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
 						<h1 style="font-size: 25px; text-align: center; line-height: 2em ">알림선택</h1>
 						<div style="margin-left: 13%;">
-							<input type="submit" value="voice">
-							<input type="submit" value="song">
-							<input type="submit" value="Asmr">
+							<input type="submit" value="voice" onclick="voice()">
+							<input type="submit" value="song" onclick="song()">
+							<input type="submit" value="Asmr" onclick="Asmr()">
 						</div>
+						
 						<br>
-						<table>
-							<thead>
-								<tr>
-									<th>장르</th>
-									<th>제목</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th>song</th>
-									<th>금요일에만나요</th>
-									<th><input type="button" value="선택"></th>
-								</tr>
-								<tr>
-									<th>song</th>
-									<th>라일락</th>
-									<th><input type="button" value="선택"></th>
-								</tr>
+						<script>
+							function song(){
+								var song = new Array();
+								var html = '';
+
+								song.push({title : '라일락'  });
+								song.push({title : '금요일에 만나요'});
+								song.push({title : '내손을잡아'});
+
+								for(key in song){
+     
+									html += '<tr>';
+									html += '<td>'+song[key].title+'<input type="radio" name="song" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> </td>';
+									html += '</tr>';
+								}
+
+								$("#voiceTbody").empty();
+								$("#asmrTbody").empty();
+								$("#songTbody").empty();
+								$("#songTbody").append(html);
+
+							}
+
+							function Asmr() {
+								var amsr = new Array();
+								var html ='';
+								
+								amsr.push({title : '비소리'});
+								amsr.push({title : '경적소리'});
+								amsr.push({title : '번개소리'})
+
+								for(key in amsr){
+
+									html += '<tr>';
+									html += '<td>'+amsr[key].title+'<input type="radio" name="song" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> <td>';
+									html += '</tr>';
+								}
+
+								$("#voiceTbody").empty();
+								$("#songTbody").empty();
+								$("#asmrTbody").empty();
+								$("#asmrTbody").append(html);
+							}	
+
+							function voice() {
+								var voice = new Array();
+								var html ='';
+								
+								voice.push({title : '비가오는하루입니다'});
+								voice.push({title : '안녕하세요'});
+								voice.push({title : '기분좋은아침'})
+
+								for(key in voice){
+
+									html += '<tr>';
+									html += '<td>'+voice[key].title+'<input type="radio" name="song" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> <td>';
+									html += '</tr>';
+								}
+
+								$("#songTbody").empty();
+								$("#asmrTbody").empty();
+								$("#voiceTbody").empty();
+								$("#voiceTbody").append(html);
+								
+							}	
+						</script>
+						
+							
+						<table  id="song">
+							<td>제목</td>
+							<tbody id="songTbody">
+							</tbody>
+							<tbody id="asmrTbody">
+							</tbody>
+							<tbody id="voiceTbody">
 							</tbody>
 						</table>
 						<audio src="lilac.mp3/lilac.mp3" controls="controls" style="margin-left: 20%;"></audio>

@@ -264,7 +264,7 @@
 								<div class="col-4 col-12-medium">
 									<header>
 										<h2></h2>
-										<p> </p>
+										<p> 사용자가 제품에 가까이 다가가면  </p>
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
