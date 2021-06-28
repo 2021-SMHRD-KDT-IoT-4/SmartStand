@@ -117,7 +117,7 @@
 						%>
 								<li><a href="main.jsp">Main</a></li>
 							
-							<li><a href="weather.html">Weather</a></li>
+							<li><a href="weather.jsp">Weather</a></li>
  							<li><a href="Q&AList2.jsp">Q&A</a></li>
 						
 							<li><button id = "open" style = "z-index: 2000;" >Login</button></li>
@@ -142,7 +142,7 @@
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
-							<li><a href="weather.html">Weather</a></li>
+							<li><a href="weather.jsp">Weather</a></li>
 							<li><a href="Q&AList.jsp">Q&A</a></li>
 							
 							<li><a href = "LogoutServireCon.do" id = "logout">Logout</a></li>

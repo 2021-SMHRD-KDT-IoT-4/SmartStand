@@ -85,7 +85,7 @@
 									<li><a href="myset.jsp">개인 설정</a></li>
 								</ul>
 							</li>
-							<li><a href="weather.html">Weather</a></li>
+							<li><a href="weather.jsp">Weather</a></li>
 							<li><a href="Q&AList.jsp">Q&A</a></li>
 							<li><a href="login.html" class="button primary" style=" padding-left: 0px; padding-right: 20px;">Logout</a></li>
 						</ul>
