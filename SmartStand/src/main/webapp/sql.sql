@@ -3,13 +3,13 @@
 web_board
 
 create table web_board( 
-   num number,
-   Qtitle varchar2(500),
-   id varchar2(500),
-   category varchar2(500),
-   message varchar2(500),
+   num number(5),
+   Qtitle varchar2(50) NOT NULL ,
+   id varchar2(50)  NOT NULL,
+   category varchar2(50)  NOT NULL,
+   message varchar2(500)  NOT NULL,
    day date,
-   anwser varchar2(500),
+   anwser varchar2(500)  NOT NULL,
    constraint web_board_num_pk primary key(num)
  );
  
@@ -37,14 +37,15 @@ web_member
  
  
  create table web_member( 
-   id varchar2(500),
-   pw varchar2(500),
-   name varchar2(500),
-   tel varchar2(500),
-   addr varchar2(500),
-   email varchar2(500),
+   id varchar2(20),
+   pw varchar2(20) NOT NULL,
+   name varchar2(50) NOT NULL,
+   tel varchar2(50) NOT NULL,
+   addr varchar2(50) NOT NULL,
+   email varchar2(50) NOT NULL,
    constraint web_member_id_pk primary key(id)
  );
+ 
  select * from web_member;
  
  
@@ -57,13 +58,13 @@ web_member
 web_music
  
  
- create table web_music( 
-   num number,
-   song varchar2(500),
-   singer varchar2(500),
-   genre varchar2(500),
-   cls varchar2(500),
-   mod varchar2(500),
+ create table web_music1( 
+   num number(5),
+   song varchar2(20) NOT NULL,
+   singer varchar2(20) NOT NULL,
+   genre varchar2(20) NOT NULL,
+   cls varchar2(20) NOT NULL,
+   mod varchar2(20) NOT NULL,
    constraint web_music_num_pk primary key(num)
  );
  
@@ -80,7 +81,7 @@ web_music
  ///////////////////////////////////////////////
  
  create table ledonoff( 
-   led varchar2(10),
+   led varchar2(10) NOT NULL,
    constraint ledonoff_led_pk primary key(led)
  );
  
@@ -88,3 +89,9 @@ web_music
  
  select * from ledonoff;
  drop table ledonoff;
+ 
+ 
+ //////////////////////////////////
+ create table mp3(
+ song_id number(5)
+);
