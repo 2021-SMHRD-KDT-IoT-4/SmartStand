@@ -16,83 +16,6 @@
 	</noscript>
 		<style>
 		
-		#open {
-            all: unset;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-			width: 30px;
-        }
-         #logout {
-            all: unset;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-			width: 80px;
-        }
-        #open2 {
-            all: unset;
-            border-radius: 5px;
-            cursor: pointer;
-			width: 50px;
-        }
-		
-		#table{
-	
-		text-align: center;
-		}
-        /* .login_btn {
-            color: #fff !important;
-            font-size: 30px !important;
-        } */
-
-        #title {
-            font-size: 60px !important;
-            color: white !important;
-            margin-top: 50px;
-        }
-
-        .a {
-            text-decoration-line: none;
-        }
-
-        .input {
-            width: 400px;
-            height: 50px;
-            font-size: 20px  !important;
-			border-color: black !important;
-			color: rgba(255,255,255,0.75) !important;
-			padding-top: 25px !important;
-			border: solid 0px !important;
-        }
-
-        .b {
-            vertical-align: top;
-            padding-right: 10px;
-            width: 400px;
-			color: black !important;
-        }
-
-        .c {
-            vertical-align: top;
-            padding-left: 10px;
-            width: 400px;
-            font-size: 30 !important;
-			color: black !important;
-        }
-
-        #d {
-            font-size: 18px !important;
-            text-decoration-line: none !important;
-            color: white !important;
-        }
-
-        #e {
-            font-size: 18px !important;
-            text-decoration-line: none !important;
-            color: white !important;
-        }
-		
 			.modal {
             position: fixed;
             top: 0;
@@ -231,11 +154,9 @@
 		</header>
 
 		<!-- Main -->
-		<div id="main" class="wrapper style1" style="padding-top: 50px !important;
-    padding-bottom: 100px !important;">
+		<div id="main" class="wrapper style1" style="padding-top: 50px !important; padding-bottom: 100px !important;">
 			<div class="container">
-				<header class="major" style="
-    margin-bottom: 0px;">
+				<header class="major" style=" margin-bottom: 0px;">
 					<h2>날씨정보</h2>
 					<p>Happy day, Please cherish your time.</p>
 					<p>Check out today's weather.</p>
@@ -321,47 +242,6 @@
 	</div>
 	</div>
 	</form>
-	
-	
-	<form action = "JoinServiceCon.do">
-	<div class="modal1 hidden" align = "center" >
-		<div class="modal_overlay1"></div>
-		<div class="modal_content1">
-			 <table width="800px"  align="center" style="margin-top: 70px; margin-bottom: 0px; border-collapse: unset;">
-            
-            <tr height="130px" style="background-color: rgba(255, 255, 255, 0);" >
-                <td  align="center"><h1 id="title">회원가입</h1></td>
-            </tr>
-            <tr>
-                <td  align="center"><input type = "text" placeholder ="ID를 입력해주세요" class="input1" height="70px" name="id"></td>
-            </tr>
-            <tr style="background-color: rgba(255, 255, 255, 0);">
-                <td  align="center"><input type = "text" placeholder ="PW를 입력해주세요" class="input1" height="70px" name="pw"></td>
-            </tr>
-            <tr>
-                <td  align="center"><input type = "text" placeholder ="NAME를 입력해주세요" class="input1" height="70px" name="name"></td>
-            </tr>
-            <tr style="background-color: rgba(255, 255, 255, 0);">
-                <td  align="center"><input type = "text" placeholder ="Tel을 입력해주세요" class="input1" height="70px" name="tel"></td>
-            </tr>
-            <tr>
-                <td align="center"><input type = "text" placeholder ="Addr를 입력해주세요" class="input1" height="70px" name="addr"></td>
-            </tr>
-            <tr style="background-color: rgba(255, 255, 255, 0);"> 
-                <td align="center"><input type = "text" placeholder ="Email를 입력해주세요" class="input1" height="70px" name="email"></td>
-            </tr>
-            <tr height="100px"align="center" style="background-color: rgba(255, 255, 255, 0);">
-                <td colspan ="2"><input type = "submit" value="Join" class = "join_btn"></td>
-            </tr>
-            
-        </table>
-		
-		<button style = "border-color: transparent; background-color: transparent;"></button>
-		
-	</div>
-	</div>
-	</form>
-	
 
 
 		<footer id="footer" style = "background: transparent;">
@@ -382,28 +262,7 @@
 
 
 
-
 	<script src="assets/js/jquery.min.js"></script>
-	<script>
-	
-		document.getElementById("open").addEventListener("click",function(){
-			const modal = document.querySelector(".modal");
-			modal.classList.remove("hidden", "display:block")
-			$('#nav').css('-webkit-filter', 'blur(0.5em)');
-			$('#nav').css('filter','blur(0.5em)');
-			$('#main').css('-webkit-filter', 'blur(0.5em)');
-			$('#main').css('filter','blur(0.5em)');
-		})
-		
-		document.getElementById("open1").addEventListener("click",function(){
-			const modal = document.querySelector(".modal");
-			modal.classList.add("hidden", "display:none");
-			$('#nav').css('-webkit-filter', 'none');
-			$('#nav').css('filter','none');
-			$('#main').css('-webkit-filter', 'none');
-			$('#main').css('filter','none');
-		})
-	</script>
 	<script>
 		const openButton = document.getElementById("open");
 		const openButton1 = document.getElementById("open2");
@@ -428,8 +287,6 @@
 			$('#banner').css('filter','none');
 			$('#nav').css('-webkit-filter', 'none');
 			$('#nav').css('filter','none');
-			$('#main').css('-webkit-filter', 'none');
-			$('#main').css('filter','none')
 		}
 		
 		const openModal1 = () => {
@@ -438,16 +295,12 @@
 			$('#banner').css('filter','blur(0.5em)');
 			$('#nav').css('-webkit-filter', 'blur(0.5em)');
 			$('#nav').css('filter','blur(0.5em)');
-			$('#main').css('-webkit-filter', 'blur(0.5em)');
-			$('#main').css('filter','blur(0.5em)');
 			
 		}
 		const closeModal1 = () =>{
 			modal1.classList.add("hidden", "display:none");
 			$('#banner').css('-webkit-filter', 'none');
 			$('#banner').css('filter','none');
-			$('#main').css('-webkit-filter', 'none');
-			$('#main').css('filter','none');
 			$('#nav').css('-webkit-filter', 'none');
 			$('#nav').css('filter','none');
 		}

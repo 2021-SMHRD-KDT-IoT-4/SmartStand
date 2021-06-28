@@ -247,9 +247,15 @@
 				<section id="one" class="spotlight style1 bottom">
 					<span class="image fit main"><img src="images/pic09.jpg" alt="" /></span>
 					
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						
-						<img src="images/people.png">
+						<img src="images/people.png" style="width: 200px; height: 200px;margin-left: 240px;margin-top: 100px;">
+						<img src="images/line.png" style="width: 100px; height: 100px;margin-left: 20px;margin-bottom: 50px;">
+						<img src="images/computer.png" style="width: 200px; height: 200px;margin-left: 50px;margin-top: 100px;">
+						<img src="images/line.png" style="width: 100px; height: 100px;margin-left: 50px;margin-bottom: 50px;">
+						<img src="images/umbrella-stand.png" style="width: 200px; height: 200px;margin-left: 20px;margin-top: 100px;">
+						<img src="images/line.png" style="width: 100px; height: 100px;margin-left: 20px;margin-bottom: 50px;">
+						<img src="images/umbrella-stand3.png" style="width: 70px; height: 100px;margin-left: 50px;margin-top: 100px;">
+						<img src="images/busineess.png" style="width: 170px; height: 200px;margin-left: 20px;margin-top: 100px;">
     					 
 					
 					<div class="content">
