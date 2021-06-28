@@ -246,6 +246,10 @@
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
 					<span class="image fit main"><img src="images/pic09.jpg" alt="" /></span>
+					
+						<div><a href="https://www.flaticon.com/kr/authors/linector" title="Linector">Linector</a></div>
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					
 					<div class="content">
 						<div class="container">
 							<div class="row">
