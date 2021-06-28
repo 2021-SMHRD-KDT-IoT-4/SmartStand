@@ -264,13 +264,12 @@
 								<div class="col-4 col-12-medium">
 									<header>
 										<h2></h2>
-										<p> 사용자가 제품에 가까이 다가가면  </p>
+										<p></p>
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
-<<<<<<< HEAD
 									<p></p>
-=======
+
 									<p>Smart Stand
 									사용자가 홈페이지에서 원하는 노래와 조명을 선택 할 수 있습니다.
 									 날짜, 시간, 온도등을 화면에 항상 보여주며,
@@ -282,12 +281,12 @@
 									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
 									augue varius tempus lobortis porttitor accumsan consequat
 									adipiscing lorem dolor.</p> -->
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
+
 								</div>
 								<div class="col-4 col-12-medium">
-<<<<<<< HEAD
+
 									<p></p>
-=======
+
 									<p>Users can select the song and lighting they want from the homepage.
 The date, time, temperature are always shown on the screen.
 It only shows songs and lights that are set up on rainy days.
@@ -297,7 +296,7 @@ I leave my umbrella in my busy rush hour, and I get rid of the hassle of picking
 									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integerl
 									mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
 									ipsum dolor nullam.</p> -->
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
+
 								</div>
 							</div>
 						</div>
