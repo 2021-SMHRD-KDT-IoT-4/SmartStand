@@ -161,12 +161,12 @@
 								<tr>
 									<th>song</th>
 									<th>금요일에만나요</th>
-									<th><button>선택</button></th>
+									<th><input type="button" value="선택"></th>
 								</tr>
 								<tr>
 									<th>song</th>
 									<th>라일락</th>
-									<th><button>선택</button></th>
+									<th><input type="button" value="선택"></th>
 								</tr>
 							</tbody>
 						</table>
