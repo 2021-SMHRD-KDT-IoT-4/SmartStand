@@ -287,10 +287,10 @@
 
 									<p></p>
 
-									<p>Users can select the song and lighting they want from the homepage.
+									<p><!-- Users can select the song and lighting they want from the homepage.
 The date, time, temperature are always shown on the screen.
 It only shows songs and lights that are set up on rainy days.
-I leave my umbrella in my busy rush hour, and I get rid of the hassle of picking it up again!</p>
+I leave my umbrella in my busy rush hour, and I get rid of the hassle of picking it up again! --></p>
 									<!-- <p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
 									adipiscing adipiscing metus massa. Blandit orci porttitor semper.
 									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integerl

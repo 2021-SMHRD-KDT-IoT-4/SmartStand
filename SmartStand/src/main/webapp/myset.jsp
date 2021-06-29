@@ -83,6 +83,7 @@
 								<ul>
 									<li><a href="myinfo.jsp">내 정보</a></li>
 									<li><a href="myset.jsp">개인 설정</a></li>
+									
 								</ul>
 							</li>
 							<li><a href="weather.jsp">Weather</a></li>
@@ -142,11 +143,9 @@
 				<section id="three" class="spotlight left">
 
 					
-<<<<<<< HEAD
+
 						<div style = "width: 30%; height:61%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
-=======
-						<div style = "width: 30%; height:60%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/SmartStand.git
+					
 						<h1 style="font-size: 25px; text-align: center; line-height: 2em ">알림선택</h1>
 						<div style="margin-left: 13%;">
 							<input type="submit" value="voice" onclick="voice()">
@@ -155,19 +154,43 @@
 						</div>
 						
 						<br>
+						
+						<script src ="assets/js/jquery-3.6.0.min.js"></script>
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.scrolly.min.js"></script>
+						<script src="assets/js/jquery.dropotron.min.js"></script>
+						<script src="assets/js/jquery.scrollex.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+						
 						<script>
+							function check(){
+								var chk = true;
+								//뭔진 모르겠지만 체크가 된건지 안된건지 확인하는 코드
+								if($('input:radio[name="song"]:checked').length==0){
+									chk=false;
+								}
+								if(chk){
+									alert("선택완료");
+								}else{
+									alert("선택을하지않았습니다.");
+								}
+							}
+							
 							function song(){
 								var song = new Array();
 								var html = '';
 
-								song.push({title : '라일락'  });
-								song.push({title : '금요일에 만나요'});
-								song.push({title : '내손을잡아'});
+								song.push({title : 'lilac' });
+								song.push({title : 'dolphin'});
+								song.push({title : 'rollin'});
 
 								for(key in song){
      
 									html += '<tr>';
-									html += '<td>'+song[key].title+'<input type="radio" name="song" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> </td>';
+									html += '<td>'+song[key].title+'<input class="songClass" type="radio" name="song" value="'+song[key].title+'" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> </td>';
 									html += '</tr>';
 								}
 
@@ -179,17 +202,17 @@
 							}
 
 							function Asmr() {
-								var amsr = new Array();
+								var asmr = new Array();
 								var html ='';
 								
-								amsr.push({title : '비소리'});
-								amsr.push({title : '경적소리'});
-								amsr.push({title : '번개소리'})
+								asmr.push({title : 'rain'});
+								asmr.push({title : 'rain2'});
+								asmr.push({title : 'lightning'})
 
-								for(key in amsr){
+								for(key in asmr){
 
 									html += '<tr>';
-									html += '<td>'+amsr[key].title+'<input type="radio" name="song" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> <td>';
+									html += '<td>'+asmr[key].title+'<input class="asmrClass" type="radio" name="song" value="'+asmr[key].title+'" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> <td>';
 									html += '</tr>';
 								}
 
@@ -203,14 +226,14 @@
 								var voice = new Array();
 								var html ='';
 								
-								voice.push({title : '비가오는하루입니다'});
-								voice.push({title : '안녕하세요'});
-								voice.push({title : '기분좋은아침'})
+								voice.push({title : '캐논'});
+								voice.push({title : '고향의봄'});
+								voice.push({title : '춘천의가을'})
 
 								for(key in voice){
 
 									html += '<tr>';
-									html += '<td>'+voice[key].title+'<input type="radio" name="song" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> <td>';
+									html += '<td>'+voice[key].title+'<input class="voiceClass" type="radio" name="song" value="'+voice[key].title+'" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> <td>';
 									html += '</tr>';
 								}
 
@@ -220,6 +243,55 @@
 								$("#voiceTbody").append(html);
 								
 							}	
+							
+							$(document).ready(function() {
+								$(document).on("change",".voiceClass",function(){
+									
+								 	 var radioValue = $(this).val(); 
+									console.log(radioValue);
+									if(radioValue === "캐논") {
+										$("#audio").attr("src","music/Canon.mp3");
+									}else if(radioValue === "고향의봄") {
+										$("#audio").attr("src","music/spring.mp3");
+									}else if(radioValue === "춘천의가을"){
+										$("#audio").attr("src", "music/chuncaen.mp3");
+									}
+								});
+							});
+						
+							
+							$(document).ready(function() {
+								$(document).on("change",".songClass",function(){
+									
+								 	 var radioValue = $(this).val(); 
+									console.log(radioValue);
+									if(radioValue === "lilac") {
+										$("#audio").attr("src","music/lilac.mp3");
+									}else if(radioValue === "dolphin") {
+										$("#audio").attr("src","music/Dolphin.mp3");
+									}else if(radioValue === "rollin"){
+										$("#audio").attr("src", "music/Rollin.mp3");
+									}
+								});
+							});
+							
+							$(document).ready(function() {
+								$(document).on("change",".asmrClass",function(){
+									
+								 	 var radioValue = $(this).val(); 
+									console.log(radioValue);
+									if(radioValue === "rain") {
+										$("#audio").attr("src","music/sounds_of_rain");
+									}else if(radioValue === "rain2") {
+										$("#audio").attr("src","music/sounds_of_rain2");
+									}else if(radioValue === "lightning"){
+										$("#audio").attr("src", "music/lightning.mp3");
+									}
+								});
+							});
+							
+							
+							
 						</script>
 						
 							
@@ -232,24 +304,20 @@
 							<tbody id="voiceTbody">
 							</tbody>
 						</table>
-						<audio src="lilac.mp3/lilac.mp3" controls="controls" style="margin-left: 20%;"></audio>
+						<audio src="" controls="controls" style="margin-left: 20%;" id = "audio"></audio>
+						
 						<br>
 						
-						<input style="margin-left: 40%;" type="submit" value="확인">
+						
+						<input style="margin-left: 40%;" type="button" onclick="check()" value="확인">
+						
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			
 
 	</body>
 </html>

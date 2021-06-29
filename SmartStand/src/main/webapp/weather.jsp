@@ -181,7 +181,7 @@
 
 					<div class="container">
 						<div class="app-title">
-							<p>현재 날씨</p>
+							<p style="padding: 5px; font-size: 1.4em; font-weight: 400;">현재 날씨</p>
 						</div>
 						<div class="notification"> </div>
 						<div class="weather-container" style="box-shadow: 0 0 5em 0 rgb(0 0 0 / 50%); background-color: rgba(255,255,255,0.7)">
