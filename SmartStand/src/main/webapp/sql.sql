@@ -5,12 +5,13 @@ web_board
 create table web_board( 
    num number(5),
    Qtitle varchar2(50) NOT NULL ,
-   id varchar2(50)  NOT NULL,
+   id varchar2(20)  NOT NULL,
    category varchar2(50)  NOT NULL,
    message varchar2(500)  NOT NULL,
    day date,
    anwser varchar2(500)  NOT NULL,
-   constraint web_board_num_pk primary key(num)
+   constraint web_board_num_pk primary key(num),
+   constraint FK_web_board foreign key(id) references web_member(id)
  );
  
 create sequence web_board_num_seq 
