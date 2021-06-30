@@ -144,13 +144,13 @@
 
 					
 
-						<div style = "width: 30%; height:61%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
+						<div style = "width: 30%; height:64%; margin-left: 35%; margin-top: 10%; box-shadow: 3px 3px 24px 3px;">
 					
 						<h1 style="font-size: 25px; text-align: center; line-height: 2em ">알림선택</h1>
 						<div style="margin-left: 13%;">
-							<input type="submit" value="voice" onclick="voice()">
-							<input type="submit" value="song" onclick="song()">
-							<input type="submit" value="Asmr" onclick="Asmr()">
+							<input type="submit" value="VOICE" onclick="voice()">
+							<input type="submit" value="BGM" onclick="bgm()">
+							<input type="submit" value="ASMR" onclick="Asmr()">
 						</div>
 						
 						<br>
@@ -179,25 +179,25 @@
 								}
 							}
 							
-							function song(){
-								var song = new Array();
+							function bgm(){
+								var bgm = new Array();
 								var html = '';
 
-								song.push({title : 'lilac' });
-								song.push({title : 'dolphin'});
-								song.push({title : 'rollin'});
+								bgm.push({title : '캐논' });
+								bgm.push({title : '고향의봄'});
+								bgm.push({title : '춘천의가을'});
 
-								for(key in song){
+								for(key in bgm){
      
 									html += '<tr>';
-									html += '<td>'+song[key].title+'<input class="songClass" type="radio" name="song" value="'+song[key].title+'" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> </td>';
+									html += '<td>'+bgm[key].title+'<input class="bgmClass" type="radio" name="bgm" value="'+bgm[key].title+'" style="appearance: auto; opacity:1; /* float:right; */ margin-top : 9px; margin-right: 1em"> </td>';
 									html += '</tr>';
 								}
 
 								$("#voiceTbody").empty();
 								$("#asmrTbody").empty();
-								$("#songTbody").empty();
-								$("#songTbody").append(html);
+								$("#bgmTbody").empty();
+								$("#bgmTbody").append(html);
 
 							}
 
@@ -217,7 +217,7 @@
 								}
 
 								$("#voiceTbody").empty();
-								$("#songTbody").empty();
+								$("#bgmTbody").empty();
 								$("#asmrTbody").empty();
 								$("#asmrTbody").append(html);
 							}	
@@ -226,9 +226,9 @@
 								var voice = new Array();
 								var html ='';
 								
-								voice.push({title : '캐논'});
-								voice.push({title : '고향의봄'});
-								voice.push({title : '춘천의가을'})
+								voice.push({title : '아맞다우산'});
+								voice.push({title : '우산을챙기세요'});
+								voice.push({title : '우산을챙겨라인간'})
 
 								for(key in voice){
 
@@ -237,7 +237,7 @@
 									html += '</tr>';
 								}
 
-								$("#songTbody").empty();
+								$("#bgmTbody").empty();
 								$("#asmrTbody").empty();
 								$("#voiceTbody").empty();
 								$("#voiceTbody").append(html);
@@ -249,28 +249,28 @@
 									
 								 	 var radioValue = $(this).val(); 
 									console.log(radioValue);
-									if(radioValue === "캐논") {
-										$("#audio").attr("src","music/Canon.mp3");
-									}else if(radioValue === "고향의봄") {
-										$("#audio").attr("src","music/spring.mp3");
-									}else if(radioValue === "춘천의가을"){
-										$("#audio").attr("src", "music/chuncaen.mp3");
+									if(radioValue === "아맞다우산") {
+										$("#audio").attr("src","music/umbrella1.mp3");
+									}else if(radioValue === "우산을챙기세요") {
+										$("#audio").attr("src","music/umbrella3.wav");
+									}else if(radioValue === "우산을챙겨라인간"){
+										$("#audio").attr("src", "music/umbrella2.wav");
 									}
 								});
 							});
 						
 							
 							$(document).ready(function() {
-								$(document).on("change",".songClass",function(){
+								$(document).on("change",".bgmClass",function(){
 									
 								 	 var radioValue = $(this).val(); 
 									console.log(radioValue);
-									if(radioValue === "lilac") {
-										$("#audio").attr("src","music/lilac.mp3");
-									}else if(radioValue === "dolphin") {
-										$("#audio").attr("src","music/Dolphin.mp3");
-									}else if(radioValue === "rollin"){
-										$("#audio").attr("src", "music/Rollin.mp3");
+									if(radioValue === "캐논") {
+										$("#audio").attr("src","music/Canon.mp3");
+									}else if(radioValue === "고향의봄") {
+										$("#audio").attr("src","music/spring.mp3");
+									}else if(radioValue === "춘천의가을"){
+										$("#audio").attr("src", "music/chuncaen.mp3");
 									}
 								});
 							});
@@ -297,7 +297,7 @@
 							
 						<table  id="song">
 							<td>제목</td>
-							<tbody id="songTbody">
+							<tbody id="bgmTbody">
 							</tbody>
 							<tbody id="asmrTbody">
 							</tbody>

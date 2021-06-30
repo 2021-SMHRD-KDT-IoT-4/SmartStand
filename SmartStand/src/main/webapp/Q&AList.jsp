@@ -40,6 +40,9 @@
 			MemberDTO info = (MemberDTO)session.getAttribute("login_info");
 			BoardDAO dao = new BoardDAO();
 			ArrayList<BoardDTO> list = dao.showBoard();
+			String id = info.getId();
+			ArrayList<BoardDTO> list_mq = dao.select(id);
+			
 		%>
 	
 		<div id="page-wrapper">
@@ -97,7 +100,8 @@
 						</div>
 						<!-- Table -->
 							<section>
-							<h3>List</h3>
+							<h3>My 
+							List</h3>
 									<div class="table-wrapper">
 									<table>
 										<thead>
@@ -115,15 +119,15 @@
 											
 											
 												<tbody>
-												<% for(int i = 0; i<list.size(); i++){ %>
+												<% for(int i = 0; i<list_mq.size(); i++){ %>
 													<tr>
 														<td><%=i+1 %></td>
-														<td><%=list.get(i).getCategory() %></td>
-														<td><a href = "userAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
-							<%=list.get(i).getId() %></a></td>
-														<td><%=list.get(i).getDay() %></td>
+														<td><%=list_mq.get(i).getCategory() %></td>
+														<td><a href = "userAnwser.jsp?board_num=<%= list_mq.get(i).getNum() %>">
+							                                <%=list_mq.get(i).getQtitle()%></a></td>
+														<td><%=list_mq.get(i).getDay() %></td>
 														<td>
-														<% if(list.get(i).getAnwser()==null){
+														<% if(list_mq.get(i).getAnwser()==null){
 															%>답변중<%
 														}else{
 															%>답변완료<%
@@ -134,7 +138,7 @@
 																		
 												</table>
 									</div>
-									<a href="Question.jsp" style="text-decoration: none !important; margin-left : 1000px;"><input type="button" value="Submit"></a>
+									<a href="Question.jsp" style="text-decoration: none !important; margin-left : 1000px;"><input type="button" value="Write"></a>
 									<a href="main.jsp" style="text-decoration: none !important;"><input type="button" value="Back"></a>
 							</section>
 					</div>

@@ -110,10 +110,10 @@
 													<tr>
 														<td><%=i+1 %></td>
 														
+														<td><%=list.get(i).getId() %></td>
+														<td><%=list.get(i).getCategory() %></td>
 														<td><a href = "AdminAnwser.jsp?board_num=<%= list.get(i).getNum() %>">
 															<%=list.get(i).getQtitle() %></a></td>
-														<td><%=list.get(i).getCategory() %></td>
-														<td><%=list.get(i).getId() %></td>
 														<td><%=list.get(i).getMessage() %></td>
 														<td><%=list.get(i).getDay() %></td>
 													</tr>

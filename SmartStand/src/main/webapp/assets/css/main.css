@@ -99,7 +99,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.75);
+		color: rgb(255 255 255);
 		font-family: "Roboto", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 100;
@@ -750,7 +750,7 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			width: 33.33333%;
+			width: 60%;
 		}
 
 		.row > .off-4 {
@@ -3461,7 +3461,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("../../images/pic09.jpg");
+		background-image: url("../../images/pic26.jpg");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);

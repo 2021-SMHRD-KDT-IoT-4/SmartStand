@@ -104,7 +104,7 @@
 						<div>
 							<section>
 								<header class="major" style = "margin-bottom: 30px;">
-									<h2>Anwser</h2>
+									<h2>Answer</h2>
 								</header>
 							</section>
 							<table id="list" style="width: 55%; margin-left: 22%">

@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html style="background-size: cover; background-image: url(images/rain21.jpg)">
+<html style="background-size: cover; background-image: url(images/rain22.jpg)">
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>

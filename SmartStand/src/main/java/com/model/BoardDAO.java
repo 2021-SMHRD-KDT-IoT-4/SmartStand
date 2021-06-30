@@ -77,25 +77,26 @@ public class BoardDAO {
 		
 	}
 	
-	public ArrayList<BoardDTO> select(String name) {
+	public ArrayList<BoardDTO> select(String id) {
 		list = new ArrayList<BoardDTO>();
 		conn();
 		
 		try {
-			String sql = "select * from web_board where myEmail =?";
+			String sql = "select * from web_board where id =?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, name);
+			psmt.setString(1,id);
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
 				int num = rs.getInt(1);
-				String sendName = rs.getString(2);
-				String category = rs.getString(3);
-				String myEmail = rs.getString(4);
+				String Qtitle = rs.getString(2);
+				id = rs.getString(3);
+				String category = rs.getString(4);
 				String message = rs.getString(5);
 				String day = rs.getString(6);
+				String anwser = rs.getString(7);
 				
-				info = new BoardDTO(num, sendName, category, myEmail, message, day);
+				info = new BoardDTO(num, Qtitle, id, category, message, day);
 				list.add(info);
 			}
 		} catch (SQLException e) {
@@ -110,7 +111,7 @@ public class BoardDAO {
 		conn();
 		
 		try {
-			String sql = "delete from web_board where myEmail = ?";
+			String sql = "delete from web_board where ID = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			cnt = psmt.executeUpdate();
@@ -163,7 +164,7 @@ public ArrayList<BoardDTO> showBoard() {
 				String day = rs.getString(6);
 				String anwser = rs.getString(7);
 				
-				info = new BoardDTO(num, id, Qtilte, category, Message, day,anwser);
+				info = new BoardDTO(num, Qtilte, id, category, Message, day, anwser);
 				
 				list.add(info);
 			}
