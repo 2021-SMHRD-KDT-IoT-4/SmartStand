@@ -235,9 +235,9 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>SmartStand</h2>
-							<p>Bing Your Umbrella<br/>
-								With You</p>
+							<h2 style="font-size: 100px; font-family: fantasy;">SmartStand</h2>
+							<p style="margin-right: 18%">Bing Your Umbrella With You</p>
+							
 						</header>
 						
 					</div>
