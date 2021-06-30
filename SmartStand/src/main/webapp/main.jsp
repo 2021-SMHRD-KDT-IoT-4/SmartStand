@@ -237,6 +237,7 @@
 						<header>
 							<h2 style="font-size: 100px; font-family: fantasy;">SmartStand</h2>
 							<p style="margin-right: 18%">Bing Your Umbrella With You</p>
+							<p style="font-family: fantasy; margin-right: 40%;">아 맞다 우산</p>
 							
 						</header>
 						
