@@ -16,6 +16,20 @@
 	</noscript>
 		<style>
 		
+		 #open {
+            all: unset;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+			width: 30px;
+        }
+        #open2 {
+            all: unset;
+            border-radius: 5px;
+            cursor: pointer;
+			width: 50px;
+        }
+		
 			.modal {
             position: fixed;
             top: 0;
