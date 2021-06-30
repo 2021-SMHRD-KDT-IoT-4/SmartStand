@@ -295,7 +295,7 @@
 				<section id="two" class="spotlight style2 right">
 					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
 					
-						<img src="images/2por.png" style = "height: 969px">
+						<img src="images/smartLED.png" style = "height: 969px">
 						
 					<div class="content" style="background-color:  rgb(15 19 58 / 13%); border-color: #444a9869;">
 						<header>
@@ -320,7 +320,7 @@
 				<section id="three" class="spotlight style3 left">
 					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
 					
-						<img  src="images/2por2.png" style="height: 969px;width: 1800px;margin-left: 5%;">
+						<img  src="images/smartweather.png" style="height: 969px;width: 1800px;margin-left: 5%;">
 					
 					<div class="content" style="background-color:  rgb(15 19 58 / 13%); border-color: #444a9869;">
 						<header>
