@@ -308,8 +308,7 @@
 							<h2>Led & Sound</h2>
 							<p>사람을 인식하여 노래와 빛을 밝혀주는 똑똑한 우산꽂이</p>
 						</header>
-						<p>
-A smart umbrella stand that recognizes people and illuminates songs and lights</p>
+						<p>A smart umbrella stand that recognizes people and illuminates songs and lights</p>
 						<ul class="actions">
 							<!-- <li><a href="#" class="button">Learn More</a></li> -->
 						</ul>
