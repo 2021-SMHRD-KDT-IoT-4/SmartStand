@@ -134,7 +134,7 @@
 											</tr>
 										</tfoot>
 									</table>
-									<p><input type="submit" value="개인정보수정"></p>
+									<!-- <p><input type="submit" value="개인정보수정"></p> -->
 								</div>
 							</section>
 					</div>

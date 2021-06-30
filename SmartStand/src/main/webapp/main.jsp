@@ -71,7 +71,8 @@
 
         #e {
             font-size: 18px !important;
-            text-decoration-line: none !important;
+            text-decorat
+            ion-line: none !important;
             color: white !important;
         }
 
@@ -245,7 +246,7 @@
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic08.jpg" alt="" /> </span>
+					<span class="image fit main"><img src="images/pic03.jpg" alt="" /> </span>
 					
 						
 						<img src="images/people.png" style="width: 300px; height: 300px;margin-left: 60px;margin-top: 200px;">
@@ -258,56 +259,42 @@
 						<img src="images/busineess.png" style="width: 200px; height: 300px;margin-left: 20px;margin-top: 100px;">
     					 
 					
-					<div class="content">
+					<div class="content" style="background-color:  rgb(15 19 58 / 13%);">
 						<div class="container">
 							<div class="row">
-								<div class="col-4 col-12-medium">
+								<!-- <div class="col-4 col-12-medium">
 									<header>
 										<h2></h2>
 										<p></p>
-									</header>
+									</header> -->
 								</div>
-								<div class="col-4 col-12-medium">
-									<p></p>
-
-									<p>Smart Stand
-									사용자가 홈페이지에서 원하는 노래와 조명을 선택 할 수 있습니다.
-									 날짜, 시간, 온도등을 화면에 항상 보여주며,
+								<div class="col-4 col-12-medium" style="margin-left: 25%; width: 31em; font-family: fantasy;">
+									<h4>Smart Stand</h4>
+									<p>사용자가 홈페이지에서 원하는 노래와 조명을 선택 할 수 있습니다.
+									날짜, 시간, 온도등을 화면에 항상 보여주며,
 									 비가 오는 날에만 직접 설정해 놓은 노래와 조명을 보여줍니다.
-									바쁜 출근 시간에 우산을 두고가서 다시 가지러 오는 번거로움을 Smart Stand로 날려버리죠!
+									바쁜 출근 시간에 우산을 두고가서 다시 가지러 오는 번거로움을 Smart Stand로 날려버리죠!</p>
+									<p>
 									</p>
-									<!-- <p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-									augue varius tempus lobortis porttitor accumsan consequat
-									adipiscing lorem dolor.</p> -->
 
 								</div>
-								<div class="col-4 col-12-medium">
+								<!-- <div class="col-4 col-12-medium">
 
 									<p></p>
 
-									<p><!-- Users can select the song and lighting they want from the homepage.
-The date, time, temperature are always shown on the screen.
-It only shows songs and lights that are set up on rainy days.
-I leave my umbrella in my busy rush hour, and I get rid of the hassle of picking it up again! --></p>
-									<!-- <p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-									adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integerl
-									mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-									ipsum dolor nullam.</p> -->
+									<p></p>
 
-								</div>
+								</div> -->
 							</div>
 						</div>
-					</div>
 					<a href="#two" class="goto-next scrolly">Next</a>
+					</div>
 				</section>
 
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right">
 					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-					<div class="content">
+					<div class="content" style="background-color:  rgb(15 19 58 / 13%);">
 						<header>
 							<h2>Interdum amet non magna accumsan</h2>
 							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
@@ -323,7 +310,7 @@ I leave my umbrella in my busy rush hour, and I get rid of the hassle of picking
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
 					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
+					<div class="content" style="background-color:  rgb(15 19 58 / 13%);">
 						<header>
 							<h2>Interdum felis blandit praesent sed augue</h2>
 							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
@@ -365,20 +352,26 @@ I leave my umbrella in my busy rush hour, and I get rid of the hassle of picking
 				
 			</tr>
 			<tr height="50px"style="background-color: rgba(255, 255, 255, 0);">
-				<td class="b" align="center" ><a href="" id="d" >ID/PW찾기</a></td>
+			<!-- 	<td class="b" align="center" ><a href="" id="d" >ID/PW찾기</a></td>
 
-				<td class="c"><a href="Join.html" id="e" >회원가입</a></td>
+				<td class="c"><a href="join.jsp" id="e" >회원가입</a></td> -->
 			</tr>
 			<tr height="70px" align="center" style="background-color: rgba(255, 255, 255, 0);">
-				<td colspan="2"><input type="submit" value="Login" class="login_btn" ></td>
+				<td colspan="2"><input type="submit" value="Login" class="login
+				_btn" ></td>
+			<!-- 	<td colspan="2"><input type="submit" value="join" class="join_go" ></td>
+				 -->
 			</tr>
 
 		</table>
-		
-		<button style = "border-color: transparent; background-color: transparent;"></button>
+			
+
+				<button style = "border-color: transparent; background-color: transparent;"></button>
 	</div>
 	</div>
 	</form>
+	
+	
 	
 	
 	<form action = "JoinServiceCon.do">
