@@ -259,7 +259,7 @@
 						<img src="images/busineess.png" style="width: 200px; height: 300px;margin-left: 20px;margin-top: 100px;">
     					 
 					
-					<div class="content" style="background-color:  rgb(15 19 58 / 13%);">
+					<div class="content" style="background-color:  rgb(15 19 58 / 13%); border-color: #444a9869; padding: 5.1em 0 2.8em 0;">
 						<div class="container">
 							<div class="row">
 								<!-- <div class="col-4 col-12-medium">
@@ -268,14 +268,13 @@
 										<p></p>
 									</header> -->
 								</div>
-								<div class="col-4 col-12-medium" style="margin-left: 25%; width: 31em; font-family: fantasy;">
-									<h4>Smart Stand</h4>
-									<p>사용자가 홈페이지에서 원하는 노래와 조명을 선택 할 수 있습니다.
-									날짜, 시간, 온도등을 화면에 항상 보여주며,
-									 비가 오는 날에만 직접 설정해 놓은 노래와 조명을 보여줍니다.
-									바쁜 출근 시간에 우산을 두고가서 다시 가지러 오는 번거로움을 Smart Stand로 날려버리죠!</p>
-									<p>
-									</p>
+								<div class="col-4 col-12-medium" style="margin-left: 25%; width: 31em; font-family: revert;">
+									<h4 style="font-size: 1.4em;">Smart Stand</h4>
+                           			<p>사용자가 홈페이지에서 원하는 노래와 조명을 선택 할 수 있습니다.<br>
+                           				날짜, 시간, 온도등을 화면에 항상 보여주며,
+                            			비가 오는 날에만 직접<br> 설정해 놓은 노래와 조명을 보여줍니다.
+                           				바쁜 출근 시간에 우산을<br> 두고가서 다시 가지러 오는 번거로움을 Smart Stand로 날려버리죠!</p>
+									
 
 								</div>
 								<!-- <div class="col-4 col-12-medium">
@@ -287,21 +286,32 @@
 								</div> -->
 							</div>
 						</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
+					<a href
+					="#two" class="goto-next scrolly">Next</a>
 					</div>
 				</section>
 
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right">
 					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-					<div class="content" style="background-color:  rgb(15 19 58 / 13%);">
+					
+						<img src="images/2por.png" style = "height: 969px">
+						
+					<div class="content" style="background-color:  rgb(15 19 58 / 13%); border-color: #444a9869;">
 						<header>
-							<h2>Interdum amet non magna accumsan</h2>
-							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<h2>Led & Sound</h2>
+							<p>사람을 인식하여 노래와 빛을 밝혀주는 똑똑한 우산꽂이</p>
 						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
+						<p>
+A smart umbrella stand that recognizes people and illuminates songs and lights</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<!-- <li><a href="#" class="button">Learn More</a></li> -->
 						</ul>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
@@ -310,14 +320,28 @@
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
 					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content" style="background-color:  rgb(15 19 58 / 13%);">
+					
+						<img  src="images/2por2.png" style="height: 969px;width: 1800px;margin-left: 5%;">
+					
+					<div class="content" style="background-color:  rgb(15 19 58 / 13%); border-color: #444a9869;">
 						<header>
-							<h2>Interdum felis blandit praesent sed augue</h2>
-							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<h3 style="font-size: 31.5px">기상청 정보를 이용한 화면출력</h3>
+							<br>
+							<p>Smart Stand는 기상청정보를 이용하여
+							화면에 시간과 날짜, 기온, 날씨를 보여줍니다. </p>
+							<p>Smart Stand shows the time, date, temperature, and weather on the screen using weather information.</p>
 						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
+						<p></p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="#" class="button" style="
+    margin-top: 250px;
+">Top</a></li>
 						</ul>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>z
