@@ -339,9 +339,7 @@ A smart umbrella stand that recognizes people and illuminates songs and lights</
 						</header>
 						<p></p>
 						<ul class="actions">
-							<li><a href="#" class="button" style="
-    margin-top: 250px;
-">Top</a></li>
+							<li><a href="#" class="button" style=" margin-top: 250px;">Top</a></li>
 						</ul>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>z
