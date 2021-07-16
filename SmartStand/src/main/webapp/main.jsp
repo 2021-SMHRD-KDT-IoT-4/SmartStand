@@ -274,8 +274,7 @@
 									날짜, 시간, 온도등을 화면에 항상 보여주며,
 									 비가 오는 날에만 직접<br> 설정해 놓은 노래와 조명을 보여줍니다.
 									바쁜 출근 시간에 우산을<br> 두고가서 다시 가지러 오는 번거로움을 Smart Stand로 날려버리죠!</p>
-									<p>
-									</p>
+									
 
 								</div>
 								<!-- <div class="col-4 col-12-medium">
@@ -374,7 +373,7 @@
 	
 	
 	
-	<form action = "JoinServiceCon.do">
+<form action = "JoinServiceCon.do">
 	<div class="modal1 hidden" align = "center" >
 		<div class="modal_overlay1"></div>
 		<div class="modal_content1">
